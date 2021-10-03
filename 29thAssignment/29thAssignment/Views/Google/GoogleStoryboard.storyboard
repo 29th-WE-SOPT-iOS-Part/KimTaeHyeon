@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pSJ-PR-15D">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,12 +13,13 @@
             <objects>
                 <viewController storyboardIdentifier="GoogleSignInViewController" id="Y6W-OH-hqX" customClass="GoogleSignInViewController" customModule="_9thAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="WcH-Dk-FDa"/>
+                    <nil key="simulatedTopBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,7 +30,7 @@
             <objects>
                 <viewController storyboardIdentifier="GoogleSignUpViewController" id="f5K-SL-2VV" customClass="GoogleSignUpViewController" customModule="_9thAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bSz-xu-ozH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cUz-M8-ygq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -44,15 +45,61 @@
             <objects>
                 <viewController storyboardIdentifier="GoogleConfirmViewController" id="GUn-eZ-ofE" customClass="GoogleConfirmViewController" customModule="_9thAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4EX-JQ-pb3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="1Po-nr-4CX">
+                                <rect key="frame" x="24" y="248.66666666666663" width="327" height="235"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKQ-dA-pIa">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="52.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                                        <color key="textColor" red="0.25882352939999997" green="0.52156862749999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jff-gE-znR">
+                                        <rect key="frame" x="0.0" y="92.666666666666657" width="327" height="57.333333333333343"/>
+                                        <string key="text">OOO님 
+환영합니다!</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FjE-Fq-nMu">
+                                        <rect key="frame" x="0.0" y="190.00000000000003" width="327" height="45"/>
+                                        <color key="backgroundColor" red="0.25882352939999997" green="0.52156862749999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="1xm-7A-tZQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="확인">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nKQ-dA-pIa" secondAttribute="trailing" id="7KC-CE-Szx"/>
+                                    <constraint firstItem="jff-gE-znR" firstAttribute="leading" secondItem="1Po-nr-4CX" secondAttribute="leading" id="90i-17-bVf"/>
+                                    <constraint firstAttribute="trailing" secondItem="FjE-Fq-nMu" secondAttribute="trailing" id="OOb-L4-fJC"/>
+                                    <constraint firstItem="FjE-Fq-nMu" firstAttribute="leading" secondItem="1Po-nr-4CX" secondAttribute="leading" id="RIK-6W-iZw"/>
+                                    <constraint firstItem="nKQ-dA-pIa" firstAttribute="leading" secondItem="1Po-nr-4CX" secondAttribute="leading" id="jUO-NY-tFs"/>
+                                    <constraint firstAttribute="trailing" secondItem="jff-gE-znR" secondAttribute="trailing" id="sdu-lG-i9a"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FUg-N1-2FK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FUg-N1-2FK" firstAttribute="trailing" secondItem="1Po-nr-4CX" secondAttribute="trailing" constant="24" id="AHv-fA-BUR"/>
+                            <constraint firstItem="1Po-nr-4CX" firstAttribute="centerY" secondItem="4EX-JQ-pb3" secondAttribute="centerY" constant="-40" id="QB2-YV-J0o"/>
+                            <constraint firstItem="1Po-nr-4CX" firstAttribute="leading" secondItem="FUg-N1-2FK" secondAttribute="leading" constant="24" id="jWX-ds-p86"/>
+                            <constraint firstItem="1Po-nr-4CX" firstAttribute="centerX" secondItem="4EX-JQ-pb3" secondAttribute="centerX" id="qz1-PR-2og"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4PY-gh-vdv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2663.768115942029" y="89.732142857142847"/>
+            <point key="canvasLocation" x="2663.1999999999998" y="89.408866995073893"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hYT-bU-MTT">
@@ -60,7 +107,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pSJ-PR-15D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HRp-NF-laC">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

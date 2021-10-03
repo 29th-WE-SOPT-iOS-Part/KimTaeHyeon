@@ -9,21 +9,28 @@ import UIKit
 
 class GoogleSignUpViewController: UIViewController {
 
+    private var signFormView: UIView = SignFormView(.SignUp)
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupAttributes()
+        setupLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setupAttributes() {
+        setupNavigationBar()
     }
-    */
+    
+    private func setupLayout() {
+        view.addSubview(signFormView)
+        signFormView.translatesAutoresizingMaskIntoConstraints = false
+        signFormView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        signFormView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        signFormView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        signFormView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
 
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.isHidden = true
+    }
 }
