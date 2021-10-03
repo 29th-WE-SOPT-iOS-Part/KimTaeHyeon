@@ -16,6 +16,10 @@
 		BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD593A2709E8A300AC85BF /* TempModel.swift */; };
 		BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD593C2709E8B000AC85BF /* TempService.swift */; };
 		BDBD59412709E9A400AC85BF /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59402709E9A400AC85BF /* UIView+Extensions.swift */; };
+		BDBD59442709EDF100AC85BF /* GoogleStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDBD59432709EDF100AC85BF /* GoogleStoryboard.storyboard */; };
+		BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */; };
+		BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */; };
+		BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		BDBD593A2709E8A300AC85BF /* TempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempModel.swift; sourceTree = "<group>"; };
 		BDBD593C2709E8B000AC85BF /* TempService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempService.swift; sourceTree = "<group>"; };
 		BDBD59402709E9A400AC85BF /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		BDBD59432709EDF100AC85BF /* GoogleStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoogleStoryboard.storyboard; sourceTree = "<group>"; };
+		BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignUpViewController.swift; sourceTree = "<group>"; };
+		BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
+		BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleConfirmViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		BDBD59302709E78900AC85BF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDBD59422709EDDE00AC85BF /* Google */,
 				BDBD59222709E6BC00AC85BF /* Main.storyboard */,
 				BDBD59272709E6BD00AC85BF /* LaunchScreen.storyboard */,
 				BDBD59202709E6BC00AC85BF /* ViewController.swift */,
@@ -130,6 +139,17 @@
 				BDBD593C2709E8B000AC85BF /* TempService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BDBD59422709EDDE00AC85BF /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				BDBD59432709EDF100AC85BF /* GoogleStoryboard.storyboard */,
+				BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */,
+				BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */,
+				BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */,
+			);
+			path = Google;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBD59442709EDF100AC85BF /* GoogleStoryboard.storyboard in Resources */,
 				BDBD59292709E6BD00AC85BF /* LaunchScreen.storyboard in Resources */,
 				BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */,
 				BDBD59242709E6BC00AC85BF /* Main.storyboard in Resources */,
@@ -203,10 +224,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDBD59412709E9A400AC85BF /* UIView+Extensions.swift in Sources */,
+				BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */,
 				BDBD59212709E6BC00AC85BF /* ViewController.swift in Sources */,
+				BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */,
 				BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */,
 				BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */,
 				BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */,
+				BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */,
 				BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
