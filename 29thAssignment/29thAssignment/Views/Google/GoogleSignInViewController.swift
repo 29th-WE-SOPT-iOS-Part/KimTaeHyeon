@@ -9,12 +9,13 @@ import UIKit
 
 class GoogleSignInViewController: UIViewController {
     
-    private var signFormView: UIView = SignFormView(.SignIn)
+    private var signFormView: SignFormView = SignFormView(.SignIn)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAttributes()
         setupLayout()
+        setupActions()
     }
     
     private func setupAttributes() {
@@ -32,5 +33,14 @@ class GoogleSignInViewController: UIViewController {
 
     private func setupNavigationBar() {
         navigationController?.navigationBar.isHidden = true
+    }
+    
+    private func setupActions() {
+        guard let signUpVC = UIStoryboard(name: "GoogleStoryboard", bundle: nil)
+                .instantiateViewController(identifier: "GoogleSignUpViewController") as? GoogleSignUpViewController else { return }
+        
+        signFormView.completionHandler = {
+            self.navigationController?.pushViewController(signUpVC, animated: true)
+        }
     }
 }
