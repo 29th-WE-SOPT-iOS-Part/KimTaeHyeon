@@ -16,10 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let googleStoryboard = UIStoryboard(name: "GoogleStoryboard", bundle: nil)
-        let googleSignInViewController = googleStoryboard.instantiateViewController(identifier: "GoogleSignInViewController") as? GoogleSignInViewController
+        guard let googleSignInViewController = googleStoryboard
+                .instantiateViewController(identifier: "GoogleSignInViewController") as? GoogleSignInViewController else { return }
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = googleSignInViewController
+        window?.rootViewController = UINavigationController(rootViewController: googleSignInViewController)
         window?.makeKeyAndVisible()
         
     }
