@@ -69,6 +69,7 @@ final class SignFormView: UIView {
             subview.layer.cornerRadius = 10
         }
         nextButton.layer.cornerRadius = 10
+        passwordTextField.isSecureTextEntry = true
         
         titleLabel.text = category.title
         switch category {
