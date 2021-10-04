@@ -7,44 +7,44 @@
 
 import UIKit
 
+import SnapKit
+
 class GoogleSignInViewController: UIViewController {
     
+    // MARK: - Properties
     private var signFormView: SignFormView = SignFormView(.SignIn)
-
+    
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAttributes()
+        setupAttribute()
         setupLayout()
-        setupActions()
+        setupAction()
     }
     
-    private func setupAttributes() {
+    // MARK: - Setup Functions
+    private func setupAttribute() {
         setupNavigationBar()
     }
     
     private func setupLayout() {
         view.addSubview(signFormView)
-        signFormView.translatesAutoresizingMaskIntoConstraints = false
-        signFormView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        signFormView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        signFormView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        signFormView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        signFormView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
     }
 
     private func setupNavigationBar() {
         navigationController?.navigationBar.isHidden = true
     }
     
-    private func setupActions() {
-        guard let signUpVC = UIStoryboard(name: "GoogleStoryboard", bundle: nil)
-                .instantiateViewController(identifier: "GoogleSignUpViewController") as? GoogleSignUpViewController else { return }
-        guard let confirmVC = UIStoryboard(name: "GoogleStoryboard", bundle: nil)
-                .instantiateViewController(identifier: "GoogleConfirmViewController") as? GoogleConfirmViewController else { return }
-        
+    private func setupAction() {
         signFormView.createAccountButtonClosure = {
+            let signUpVC = GoogleSignUpViewController()
             self.navigationController?.pushViewController(signUpVC, animated: true)
         }
         signFormView.nextButtonClosure = {
+            let confirmVC = GoogleConfirmViewController()
             self.present(confirmVC, animated: true, completion: nil)
         }
     }
