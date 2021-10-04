@@ -45,6 +45,7 @@ class GoogleSignInViewController: UIViewController {
         }
         signFormView.nextButtonClosure = {
             let confirmVC = GoogleConfirmViewController()
+            confirmVC.name = self.signFormView.getName()
             self.present(confirmVC, animated: true, completion: nil)
         }
     }

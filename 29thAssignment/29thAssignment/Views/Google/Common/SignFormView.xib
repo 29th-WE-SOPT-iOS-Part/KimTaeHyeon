@@ -10,11 +10,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignFormView" customModule="_9thAssignment" customModuleProvider="target">
             <connections>
+                <outlet property="contactTextField" destination="eZx-3M-kPV" id="Fvj-R9-rFV"/>
                 <outlet property="createAccountButton" destination="fO5-J7-QAc" id="LkU-KN-NAs"/>
                 <outlet property="descriptionLabel" destination="Plh-l6-NJ3" id="bsO-rP-o6a"/>
                 <outlet property="displayPasswordButton" destination="ZcE-cl-ZAQ" id="arv-BU-l7B"/>
                 <outlet property="inputStackView" destination="jd9-o5-Fox" id="HAm-H5-28h"/>
+                <outlet property="nameTextField" destination="QGB-UZ-lta" id="OKQ-n6-V85"/>
                 <outlet property="nextButton" destination="cFY-J3-7Nx" id="Vm2-Wh-zbv"/>
+                <outlet property="passwordTextField" destination="ShW-5V-JK3" id="Oxp-dD-fPJ"/>
                 <outlet property="titleLabel" destination="syW-oD-0Un" id="C26-Ad-NEP"/>
             </connections>
         </placeholder>

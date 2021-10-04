@@ -12,6 +12,9 @@ import SnapKit
 
 class GoogleConfirmViewController: UIViewController {
     
+    // MARK: - Properties
+    var name: String?
+    
     // MARK: - UI Properties
     private let verticalStackView = UIStackView().then {
         $0.axis = .vertical
@@ -45,6 +48,7 @@ class GoogleConfirmViewController: UIViewController {
         super.viewDidLoad()
         setupAttribute()
         setupLayout()
+        setupMessage()
     }
 
     // MARK: - Setup Functions
@@ -64,5 +68,12 @@ class GoogleConfirmViewController: UIViewController {
             $0.centerY.equalToSuperview().offset(-80)
         }
         verticalStackView.setCustomSpacing(60, after: messageLabel)
+    }
+    
+    // MARK: - Private Functions
+    private func setupMessage() {
+        if let name = self.name {
+            messageLabel.text = "\(name)님\n환영합니다!"
+        }
     }
 }

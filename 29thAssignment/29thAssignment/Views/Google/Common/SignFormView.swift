@@ -22,11 +22,14 @@ enum SignForm {
 }
 
 final class SignFormView: UIView {
-    
+    // MARK: - Properties
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
     @IBOutlet weak var inputStackView: UIStackView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var contactTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var displayPasswordButton: UIButton!
     
     @IBOutlet weak var createAccountButton: UIButton!
@@ -35,6 +38,7 @@ final class SignFormView: UIView {
     public var createAccountButtonClosure: (() ->  Void)?
     public var nextButtonClosure: (() ->  Void)?
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
@@ -59,6 +63,7 @@ final class SignFormView: UIView {
         self.addSubview(view)
     }
     
+    // MARK: - Setup Functions
     private func setupAttributes(_ category: SignForm) {
         for subview in inputStackView.arrangedSubviews {
             subview.layer.cornerRadius = 10
@@ -91,6 +96,13 @@ final class SignFormView: UIView {
         nextButton.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
     }
     
+    // MARK: - Public Functions
+    public func getName() -> String {
+        guard let name = nameTextField.text else { return "알 수 없음"}
+        return name.isEmpty ? "알 수 없음" : name
+    }
+    
+    // MARK: - Objc Functions
     @objc
     private func tapCreateAccountButton() {
         createAccountButtonClosure?()
