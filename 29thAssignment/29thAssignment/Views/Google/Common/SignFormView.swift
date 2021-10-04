@@ -32,9 +32,12 @@ final class SignFormView: UIView {
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
+    public var completionHandler: (() ->  Void)?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         initView()
+        setupActions()
     }
     
     required init?(coder: NSCoder) {
@@ -80,5 +83,14 @@ final class SignFormView: UIView {
         descriptionLabel.textColor = .clear
         displayPasswordButton.isHidden = false
         createAccountButton.isHidden = true
+    }
+    
+    private func setupActions() {
+        nextButton.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
+    }
+    
+    @objc
+    private func tapNextButton() {
+        completionHandler?()
     }
 }
