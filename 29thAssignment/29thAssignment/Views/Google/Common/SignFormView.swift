@@ -37,6 +37,16 @@ final class SignFormView: UIView {
     
     public var createAccountButtonClosure: (() ->  Void)?
     public var nextButtonClosure: (() ->  Void)?
+    private var passwordToggleFlag: Bool = false {
+        didSet {
+            passwordTextField.isSecureTextEntry.toggle()
+            if passwordToggleFlag {
+                displayPasswordButton.setImage(UIImage(systemName: "checkmark.square.fill"), for: .normal)
+            } else {
+                displayPasswordButton.setImage(UIImage(systemName: "square"), for: .normal)
+            }
+        }
+    }
     
     // MARK: - Init
     override init(frame: CGRect) {
@@ -98,6 +108,7 @@ final class SignFormView: UIView {
     private func setupActions() {
         createAccountButton.addTarget(self, action: #selector(tapCreateAccountButton), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
+        displayPasswordButton.addTarget(self, action: #selector(tapDisplayPasswordButton), for: .touchUpInside)
     }
     
     private func setupTextFields() {
@@ -120,6 +131,11 @@ final class SignFormView: UIView {
     @objc
     private func tapNextButton() {
         nextButtonClosure?()
+    }
+    
+    @objc
+    private func tapDisplayPasswordButton() {
+        passwordToggleFlag.toggle()
     }
 }
 
