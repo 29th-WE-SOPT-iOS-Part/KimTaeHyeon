@@ -52,6 +52,7 @@ final class SignFormView: UIView {
     convenience init(_ category: SignForm) {
         self.init()
         setupAttributes(category)
+        setupTextFields()
     }
     
     private func initView() {
@@ -68,8 +69,10 @@ final class SignFormView: UIView {
         for subview in inputStackView.arrangedSubviews {
             subview.layer.cornerRadius = 10
         }
+        
+        nextButton.isEnabled = false
+        nextButton.backgroundColor = .darkGray
         nextButton.layer.cornerRadius = 10
-        passwordTextField.isSecureTextEntry = true
         
         titleLabel.text = category.title
         switch category {
@@ -97,6 +100,11 @@ final class SignFormView: UIView {
         nextButton.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
     }
     
+    private func setupTextFields() {
+        passwordTextField.isSecureTextEntry = true
+        [nameTextField, contactTextField, passwordTextField].forEach { $0?.delegate = self }
+    }
+    
     // MARK: - Public Functions
     public func getName() -> String {
         guard let name = nameTextField.text else { return "알 수 없음"}
@@ -112,5 +120,32 @@ final class SignFormView: UIView {
     @objc
     private func tapNextButton() {
         nextButtonClosure?()
+    }
+}
+
+extension SignFormView: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        guard let isNameEmpty = nameTextField.text?.isEmpty else { return }
+        guard let isContactEmpty = contactTextField.text?.isEmpty else { return }
+        guard let isPasswordEmpty = passwordTextField.text?.isEmpty else { return }
+        
+        if isNameEmpty || isContactEmpty || isPasswordEmpty {
+            nextButton.isEnabled = false
+            nextButton.backgroundColor = .darkGray
+        } else {
+            nextButton.isEnabled = true
+            nextButton.backgroundColor = UIColor(red: 66/255, green: 133/255, blue: 244/255, alpha: 1)
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField: contactTextField.becomeFirstResponder()
+        case contactTextField: passwordTextField.becomeFirstResponder()
+        case passwordTextField: passwordTextField.resignFirstResponder()
+        default: break
+        }
+        
+        return true
     }
 }
