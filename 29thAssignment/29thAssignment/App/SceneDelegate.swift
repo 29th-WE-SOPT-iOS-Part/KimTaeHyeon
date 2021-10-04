@@ -15,16 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let googleStoryboard = UIStoryboard(name: "GoogleStoryboard", bundle: nil)
-        guard let googleSignInViewController = googleStoryboard
-                .instantiateViewController(identifier: "GoogleSignInViewController") as? GoogleSignInViewController else { return }
-        
+        let googleSignInViewController = GoogleSignInViewController()
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = UINavigationController(rootViewController: googleSignInViewController)
         window?.makeKeyAndVisible()
-        
     }
-
-
 }
 
