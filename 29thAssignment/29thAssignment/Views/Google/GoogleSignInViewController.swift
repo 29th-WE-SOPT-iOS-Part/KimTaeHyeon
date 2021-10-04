@@ -38,9 +38,14 @@ class GoogleSignInViewController: UIViewController {
     private func setupActions() {
         guard let signUpVC = UIStoryboard(name: "GoogleStoryboard", bundle: nil)
                 .instantiateViewController(identifier: "GoogleSignUpViewController") as? GoogleSignUpViewController else { return }
+        guard let confirmVC = UIStoryboard(name: "GoogleStoryboard", bundle: nil)
+                .instantiateViewController(identifier: "GoogleConfirmViewController") as? GoogleConfirmViewController else { return }
         
-        signFormView.completionHandler = {
+        signFormView.createAccountButtonClosure = {
             self.navigationController?.pushViewController(signUpVC, animated: true)
+        }
+        signFormView.nextButtonClosure = {
+            self.present(confirmVC, animated: true, completion: nil)
         }
     }
 }
