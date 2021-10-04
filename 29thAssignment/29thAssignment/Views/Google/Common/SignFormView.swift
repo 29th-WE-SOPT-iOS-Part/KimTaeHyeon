@@ -32,7 +32,8 @@ final class SignFormView: UIView {
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-    public var completionHandler: (() ->  Void)?
+    public var createAccountButtonClosure: (() ->  Void)?
+    public var nextButtonClosure: (() ->  Void)?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -86,11 +87,17 @@ final class SignFormView: UIView {
     }
     
     private func setupActions() {
+        createAccountButton.addTarget(self, action: #selector(tapCreateAccountButton), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(tapNextButton), for: .touchUpInside)
     }
     
     @objc
+    private func tapCreateAccountButton() {
+        createAccountButtonClosure?()
+    }
+    
+    @objc
     private func tapNextButton() {
-        completionHandler?()
+        nextButtonClosure?()
     }
 }
