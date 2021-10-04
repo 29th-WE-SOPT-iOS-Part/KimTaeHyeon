@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,7 @@
 		BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */; };
 		BDBD594F270A0DAE00AC85BF /* SignFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDBD594E270A0DAE00AC85BF /* SignFormView.xib */; };
 		BDBD5951270A0DBC00AC85BF /* SignFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD5950270A0DBC00AC85BF /* SignFormView.swift */; };
+		BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleConfirmViewController.swift; sourceTree = "<group>"; };
 		BDBD594E270A0DAE00AC85BF /* SignFormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignFormView.xib; sourceTree = "<group>"; };
 		BDBD5950270A0DBC00AC85BF /* SignFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignFormView.swift; sourceTree = "<group>"; };
+		BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		E97EF9AD960604173160C552 /* Pods-29thAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29thAssignment.release.xcconfig"; path = "Target Support Files/Pods-29thAssignment/Pods-29thAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				BDBD59402709E9A400AC85BF /* UIView+Extensions.swift */,
+				BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -181,7 +184,6 @@
 				70BA03D0CB54617A523F6A31 /* Pods-29thAssignment.debug.xcconfig */,
 				E97EF9AD960604173160C552 /* Pods-29thAssignment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -303,6 +305,7 @@
 				BDBD59412709E9A400AC85BF /* UIView+Extensions.swift in Sources */,
 				BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */,
 				BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */,
+				BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */,
 				BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */,
 				BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */,
 				BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */,
