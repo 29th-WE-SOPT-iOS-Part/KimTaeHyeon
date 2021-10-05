@@ -42,6 +42,7 @@ class GoogleSignUpViewController: UIViewController {
         signFormView.nextButtonClosure = {
             let confirmVC = GoogleConfirmViewController()
             confirmVC.name = self.signFormView.getName()
+            confirmVC.modalPresentationStyle = .overFullScreen
             self.present(confirmVC, animated: true, completion: nil)
         }
     }
