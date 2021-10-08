@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D59A313F9A7C789E5DEF8EE /* Pods_29thAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F853999E454A923520C670 /* Pods_29thAssignment.framework */; };
+		BD722C8D271079AB00B9CC56 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C8C271079AB00B9CC56 /* String+Extension.swift */; };
 		BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */; };
 		BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */; };
 		BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBD59252709E6BD00AC85BF /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		47F853999E454A923520C670 /* Pods_29thAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29thAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BA03D0CB54617A523F6A31 /* Pods-29thAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29thAssignment.debug.xcconfig"; path = "Target Support Files/Pods-29thAssignment/Pods-29thAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		BD722C8C271079AB00B9CC56 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BDBD59192709E6BC00AC85BF /* 29thAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 29thAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				BDBD59402709E9A400AC85BF /* UIView+Extensions.swift */,
 				BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */,
+				BD722C8C271079AB00B9CC56 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDBD59412709E9A400AC85BF /* UIView+Extensions.swift in Sources */,
+				BD722C8D271079AB00B9CC56 /* String+Extension.swift in Sources */,
 				BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */,
 				BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */,
 				BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */,
