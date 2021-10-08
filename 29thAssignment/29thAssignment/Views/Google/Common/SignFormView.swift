@@ -23,6 +23,9 @@ enum SignForm {
 
 final class SignFormView: UIView {
     // MARK: - Properties
+    
+    
+    // MARK: - IB Properties
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
@@ -92,7 +95,7 @@ final class SignFormView: UIView {
             setupSignUpView()
         }
     }
-    
+
     private func setupSignInView() {
         descriptionLabel.textColor = .systemGray
         displayPasswordButton.isHidden = true
@@ -113,7 +116,10 @@ final class SignFormView: UIView {
     
     private func setupTextFields() {
         passwordTextField.isSecureTextEntry = true
-        [nameTextField, contactTextField, passwordTextField].forEach { $0?.delegate = self }
+        [nameTextField, contactTextField, passwordTextField].forEach {
+            $0?.delegate = self
+            $0?.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        }
     }
     
     // MARK: - Public Functions
@@ -137,10 +143,9 @@ final class SignFormView: UIView {
     private func tapDisplayPasswordButton() {
         passwordToggleFlag.toggle()
     }
-}
-
-extension SignFormView: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
+    
+    @objc
+    func textFieldDidChange(_ textField: UITextField) {
         guard let isNameEmpty = nameTextField.text?.isEmpty else { return }
         guard let isContactEmpty = contactTextField.text?.isEmpty else { return }
         guard let isPasswordEmpty = passwordTextField.text?.isEmpty else { return }
@@ -153,7 +158,9 @@ extension SignFormView: UITextFieldDelegate {
             nextButton.backgroundColor = UIColor(red: 66/255, green: 133/255, blue: 244/255, alpha: 1)
         }
     }
-    
+}
+
+extension SignFormView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case nameTextField: contactTextField.becomeFirstResponder()
