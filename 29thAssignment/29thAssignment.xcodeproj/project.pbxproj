@@ -11,6 +11,7 @@
 		BD722C8D271079AB00B9CC56 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C8C271079AB00B9CC56 /* String+Extension.swift */; };
 		BD722C9127107C0F00B9CC56 /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C9027107C0F00B9CC56 /* CommonTextField.swift */; };
 		BD722C932710819200B9CC56 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C922710819200B9CC56 /* UITextField+Extension.swift */; };
+		BD747CD527114979007B5274 /* CommonAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD747CD427114979007B5274 /* CommonAuthView.swift */; };
 		BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */; };
 		BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */; };
 		BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBD59252709E6BD00AC85BF /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		BD722C8C271079AB00B9CC56 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BD722C9027107C0F00B9CC56 /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
 		BD722C922710819200B9CC56 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		BD747CD427114979007B5274 /* CommonAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAuthView.swift; sourceTree = "<group>"; };
 		BDBD59192709E6BC00AC85BF /* 29thAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 29thAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				BDBD594E270A0DAE00AC85BF /* SignFormView.xib */,
 				BDBD5950270A0DBC00AC85BF /* SignFormView.swift */,
 				BD722C9027107C0F00B9CC56 /* CommonTextField.swift */,
+				BD747CD427114979007B5274 /* CommonAuthView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				BDBD5951270A0DBC00AC85BF /* SignFormView.swift in Sources */,
 				BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */,
 				BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */,
+				BD747CD527114979007B5274 /* CommonAuthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
