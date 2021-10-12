@@ -12,7 +12,7 @@ import SnapKit
 class GoogleSignInViewController: UIViewController {
     
     // MARK: - Properties
-    private var signFormView: SignFormView = SignFormView(.SignIn)
+    private var signInView = CommonAuthView(.SignIn)
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -28,8 +28,8 @@ class GoogleSignInViewController: UIViewController {
     }
     
     private func setupLayout() {
-        view.addSubview(signFormView)
-        signFormView.snp.makeConstraints {
+        view.addSubview(signInView)
+        signInView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
@@ -39,15 +39,16 @@ class GoogleSignInViewController: UIViewController {
     }
     
     private func setupAction() {
-        signFormView.createAccountButtonClosure = {
+        signInView.signUpButton.press { [weak self] in
             let signUpVC = GoogleSignUpViewController()
-            self.navigationController?.pushViewController(signUpVC, animated: true)
+            self?.navigationController?.pushViewController(signUpVC, animated: true)
         }
-        signFormView.nextButtonClosure = {
+        
+        signInView.confirmButton.press { [weak self] in
             let confirmVC = GoogleConfirmViewController()
-            confirmVC.name = self.signFormView.getName()
-            confirmVC.modalPresentationStyle = .overFullScreen
-            self.present(confirmVC, animated: true, completion: nil)
+            confirmVC.name = self?.signInView.name()
+            confirmVC.modalPresentationStyle = .fullScreen
+            self?.present(confirmVC, animated: true, completion: nil)
         }
     }
 }

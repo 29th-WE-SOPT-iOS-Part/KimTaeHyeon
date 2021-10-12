@@ -22,9 +22,8 @@
 		BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */; };
 		BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */; };
 		BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */; };
-		BDBD594F270A0DAE00AC85BF /* SignFormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDBD594E270A0DAE00AC85BF /* SignFormView.xib */; };
-		BDBD5951270A0DBC00AC85BF /* SignFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD5950270A0DBC00AC85BF /* SignFormView.swift */; };
 		BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */; };
+		BDFBB3282715661A00271907 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB3272715661A00271907 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +45,8 @@
 		BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignUpViewController.swift; sourceTree = "<group>"; };
 		BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleConfirmViewController.swift; sourceTree = "<group>"; };
-		BDBD594E270A0DAE00AC85BF /* SignFormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignFormView.xib; sourceTree = "<group>"; };
-		BDBD5950270A0DBC00AC85BF /* SignFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignFormView.swift; sourceTree = "<group>"; };
 		BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		BDFBB3272715661A00271907 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		E97EF9AD960604173160C552 /* Pods-29thAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29thAssignment.release.xcconfig"; path = "Target Support Files/Pods-29thAssignment/Pods-29thAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +151,7 @@
 				BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */,
 				BD722C8C271079AB00B9CC56 /* String+Extension.swift */,
 				BD722C922710819200B9CC56 /* UITextField+Extension.swift */,
+				BDFBB3272715661A00271907 /* UIButton+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,8 +178,6 @@
 		BDBD594D270A0D8600AC85BF /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				BDBD594E270A0DAE00AC85BF /* SignFormView.xib */,
-				BDBD5950270A0DBC00AC85BF /* SignFormView.swift */,
 				BD722C9027107C0F00B9CC56 /* CommonTextField.swift */,
 				BD747CD427114979007B5274 /* CommonAuthView.swift */,
 			);
@@ -255,7 +252,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDBD594F270A0DAE00AC85BF /* SignFormView.xib in Resources */,
 				BDBD59292709E6BD00AC85BF /* LaunchScreen.storyboard in Resources */,
 				BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */,
 			);
@@ -318,9 +314,9 @@
 				BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */,
 				BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */,
 				BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */,
+				BDFBB3282715661A00271907 /* UIButton+Extension.swift in Sources */,
 				BD722C932710819200B9CC56 /* UITextField+Extension.swift in Sources */,
 				BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */,
-				BDBD5951270A0DBC00AC85BF /* SignFormView.swift in Sources */,
 				BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */,
 				BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */,
 				BD747CD527114979007B5274 /* CommonAuthView.swift in Sources */,

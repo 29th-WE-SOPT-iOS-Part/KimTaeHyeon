@@ -12,7 +12,7 @@ import SnapKit
 class GoogleSignUpViewController: UIViewController {
 
     // MARK: - Properties
-    private var signFormView: SignFormView = SignFormView(.SignUp)
+    private var signUpView = CommonAuthView(.SignUp)
 
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -28,8 +28,8 @@ class GoogleSignUpViewController: UIViewController {
     }
     
     private func setupLayout() {
-        view.addSubview(signFormView)
-        signFormView.snp.makeConstraints {
+        view.addSubview(signUpView)
+        signUpView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
@@ -39,10 +39,10 @@ class GoogleSignUpViewController: UIViewController {
     }
     
     private func setupAction() {
-        signFormView.nextButtonClosure = {
+        signUpView.confirmButton.press {
             let confirmVC = GoogleConfirmViewController()
-            confirmVC.name = self.signFormView.getName()
-            confirmVC.modalPresentationStyle = .overFullScreen
+            confirmVC.name = self.signUpView.name()
+            confirmVC.modalPresentationStyle = .fullScreen
             self.present(confirmVC, animated: true, completion: nil)
         }
     }

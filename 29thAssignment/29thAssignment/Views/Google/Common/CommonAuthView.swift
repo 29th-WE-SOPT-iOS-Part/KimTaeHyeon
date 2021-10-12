@@ -7,22 +7,8 @@
 
 import UIKit
 
-import Then
 import SnapKit
-
-enum AuthType {
-    case SignIn
-    case SignUp
-    
-    var title: String {
-        switch self {
-        case .SignIn:
-            return "로그인"
-        case .SignUp:
-            return "회원가입"
-        }
-    }
-}
+import Then
 
 struct Const {
     struct Color {
@@ -34,12 +20,39 @@ struct Const {
     }
     
     struct Figure {
-        static let leftSpacing = 24
-        static let rightSpacing = 24
+        static let guidePadding = 24
+        static let leftPadding = 24
+        static let rightPadding = 24
+    }
+    
+    struct Image {
+        static let checkmarkFill = UIImage(systemName: "checkmark.square.fill")
+        static let checkmarkEmpty = UIImage(systemName: "square")
     }
 }
 
 final class CommonAuthView: UIView {
+    // MARK: - Enum
+    
+    enum AuthType {
+        case SignIn
+        case SignUp
+        
+        var title: String {
+            switch self {
+            case .SignIn:
+                return "로그인"
+            case .SignUp:
+                return "회원가입"
+            }
+        }
+    }
+    
+    enum ButtonType {
+        case SignIn
+        case Confirm
+    }
+    
     // MARK: - UI Components
     /**
         라벨
@@ -48,10 +61,9 @@ final class CommonAuthView: UIView {
         $0.text = "Google"
         $0.textColor = Const.Color.googleBlue
         $0.textAlignment = .center
-        $0.font = UIFont.systemFont(ofSize: 44, weight: .bold)
+        $0.font = UIFont.boldSystemFont(ofSize: 44)
     }
     private var titleLabel = UILabel().then {
-        $0.text = ""
         $0.textAlignment = .center
         $0.font = UIFont.systemFont(ofSize: 28, weight: .semibold)
     }
@@ -66,9 +78,9 @@ final class CommonAuthView: UIView {
     /**
         텍스트 필드
      */
-    private var nameTextField = CommonTextField(placeholder: TextFieldType.name.placeholderText)
-    private var contactTextField = CommonTextField(placeholder: TextFieldType.contact.placeholderText)
-    private var passwordTextField = CommonTextField(placeholder: TextFieldType.password.placeholderText,
+    private var nameTextField = CommonTextField(placeholder: TextFieldType.name.placeholder)
+    private var contactTextField = CommonTextField(placeholder: TextFieldType.contact.placeholder)
+    private var passwordTextField = CommonTextField(placeholder: TextFieldType.password.placeholder,
                                                     textFieldType: .password)
     
     /**
@@ -77,20 +89,21 @@ final class CommonAuthView: UIView {
     private lazy var passwordToggleButton = UIButton().then {
         $0.setTitle("비밀번호 표시", for: .normal)
         $0.setTitleColor(.darkGray, for: .normal)
-        $0.setImage(UIImage(systemName: "square"), for: .normal)
+        $0.setImage(Const.Image.checkmarkEmpty, for: .normal)
         $0.tintColor = .darkGray
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         $0.contentHorizontalAlignment = .leading
     }
-    private lazy var signUpButton = UIButton().then {
+    lazy var signUpButton = UIButton().then {
         $0.setTitle("계정만들기", for: .normal)
         $0.setTitleColor(Const.Color.googleBlue, for: .normal)
         $0.contentHorizontalAlignment = .leading
     }
-    private lazy var confirmButton = UIButton().then {
+    lazy var confirmButton = UIButton().then {
         $0.setTitle("다음", for: .normal)
         $0.setTitleColor(.white, for: .normal)
-        $0.backgroundColor = Const.Color.googleBlue
+        $0.isEnabled = false
+        $0.backgroundColor = .lightGray
         $0.layer.cornerRadius = 10
     }
     
@@ -108,6 +121,14 @@ final class CommonAuthView: UIView {
         $0.spacing = 152
     }
     
+    // MARK: - Properties
+    
+    private var passwordSecureFlag: Bool = false {
+        didSet {
+            passwordSecureFlag ?
+            passwordToggleButton.setImage(Const.Image.checkmarkFill, for: .normal) : passwordToggleButton.setImage(UIImage(systemName: "square"), for: .normal)
+        }
+    }
     
     // MARK: - Initialize
     
@@ -116,8 +137,8 @@ final class CommonAuthView: UIView {
         // 초기화 코드 작성 - View Instance 생성 시에 초기화 되어야 할 요소들
         setupAttributes()
         setupLayout()
-        setupButtonActions()
         setupTextFields()
+        setupButtonActions()
     }
     
     required init?(coder: NSCoder) {
@@ -129,62 +150,10 @@ final class CommonAuthView: UIView {
         type == .SignIn ? setupSignInView() : setupSignUpView()
     }
     
+    // MARK: - Setup
+    
     private func setupAttributes() {
         backgroundColor = .systemBackground
-    }
-    
-    private func setupLayout() {
-        self.addSubviews(
-            logoLabel, titleLabel, descriptionLabel,
-            textFieldStackView, passwordToggleButton, buttonStackView
-        )
-        
-        logoLabel.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide).offset(30)
-            $0.left.equalToSuperview().offset(Const.Figure.leftSpacing)
-            $0.right.equalToSuperview().inset(Const.Figure.rightSpacing)
-        }
-        
-        titleLabel.snp.makeConstraints {
-            $0.top.equalTo(logoLabel.snp.bottom).offset(16)
-            $0.left.equalToSuperview().offset(Const.Figure.leftSpacing)
-            $0.right.equalToSuperview().inset(Const.Figure.rightSpacing)
-        }
-        
-        descriptionLabel.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(30)
-            $0.left.equalToSuperview().offset(Const.Figure.leftSpacing)
-            $0.right.equalToSuperview().inset(Const.Figure.rightSpacing)
-        }
-        
-        textFieldStackView.snp.makeConstraints {
-            $0.top.equalTo(descriptionLabel.snp.bottom).offset(40)
-            $0.left.equalToSuperview().offset(Const.Figure.leftSpacing)
-            $0.right.equalToSuperview().inset(Const.Figure.rightSpacing)
-        }
-        
-        [nameTextField, contactTextField, passwordTextField].forEach { textField in
-            textField.snp.makeConstraints {
-                $0.height.equalTo(50)
-            }
-        }
-        
-        passwordToggleButton.snp.makeConstraints {
-            $0.top.equalTo(textFieldStackView.snp.bottom).offset(10)
-            $0.left.equalToSuperview().offset(Const.Figure.leftSpacing)
-            $0.right.equalToSuperview().inset(Const.Figure.rightSpacing)
-        }
-        
-        confirmButton.snp.makeConstraints {
-            $0.width.equalTo(80).priority(750)
-        }
-        
-        buttonStackView.snp.makeConstraints {
-            $0.top.equalTo(textFieldStackView.snp.bottom).offset(80)
-            $0.left.equalToSuperview().offset(Const.Figure.leftSpacing)
-            $0.right.equalToSuperview().inset(Const.Figure.rightSpacing)
-            $0.height.equalTo(45)
-        }
     }
     
     private func setupSignInView() {
@@ -201,15 +170,101 @@ final class CommonAuthView: UIView {
         signUpButton.isHidden = true
     }
     
-    private func setupButtonActions() {
-        
+    private func setupTextFields() {
+        [nameTextField, contactTextField, passwordTextField].forEach {
+            $0.delegate = self
+            $0.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        }
     }
     
-    private func setupTextFields() {
-        [nameTextField, contactTextField, passwordTextField]
-            .forEach { $0.delegate = self }
+    private func setupButtonActions() {
+        passwordToggleButton.press { [weak self] in
+            self?.passwordSecureFlag.toggle()
+        }
+    }
+    
+    // MARK: - Public Functions
+    
+    public func name() -> String {
+        guard let name = nameTextField.text else { return "알 수 없음" }
+        return name.isEmpty ? "알 수 없음" : name
+    }
+    
+    // MARK: - Objc Functions
+
+    @objc
+    func textFieldDidChange(_ textField: UITextField) {
+        let hasTextInAllTextFields = nameTextField.hasText && contactTextField.hasText && passwordTextField.hasText
+        confirmButton.isEnabled = hasTextInAllTextFields
+        confirmButton.backgroundColor = hasTextInAllTextFields ? Const.Color.googleBlue : . lightGray
+    }
+}
+
+// MARK: - Setup Layout
+/**
+ 코드로 작성하다보면 해당 부분의 길이가 길어지는 경향이 있다.
+ 다른 부분의 프로퍼티나 함수를 확인하는데에 어려움이 있어 따로 영역을 빼놓았다.
+ */
+extension CommonAuthView {
+    private func setupLayout() {
+        self.addSubviews(
+            logoLabel, titleLabel, descriptionLabel,
+            textFieldStackView, passwordToggleButton, buttonStackView
+        )
+        
+        logoLabel.snp.makeConstraints {
+            $0.top.equalTo(safeAreaLayoutGuide).offset(30)
+            $0.centerX.equalToSuperview()
+        }
+        
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(logoLabel.snp.bottom).offset(16)
+            $0.leading.trailing.equalToSuperview().inset(Const.Figure.guidePadding)
+        }
+        
+        descriptionLabel.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(30)
+            $0.leading.trailing.equalToSuperview().inset(Const.Figure.guidePadding)
+        }
+        
+        textFieldStackView.snp.makeConstraints {
+            $0.top.equalTo(descriptionLabel.snp.bottom).offset(40)
+            $0.leading.trailing.equalToSuperview().inset(Const.Figure.guidePadding)
+        }
+        
+        [nameTextField, contactTextField, passwordTextField].forEach { textField in
+            textField.snp.makeConstraints {
+                $0.height.equalTo(50)
+            }
+        }
+        
+        passwordToggleButton.snp.makeConstraints {
+            $0.top.equalTo(textFieldStackView.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview().inset(Const.Figure.guidePadding)
+        }
+        
+        confirmButton.snp.makeConstraints {
+            $0.width.equalTo(80).priority(750)
+        }
+        
+        buttonStackView.snp.makeConstraints {
+            $0.top.equalTo(textFieldStackView.snp.bottom).offset(80)
+            $0.leading.trailing.equalToSuperview().inset(Const.Figure.guidePadding)
+            $0.height.equalTo(45)
+        }
     }
 }
 
 // MARK: - TextField Delegate
-extension CommonAuthView: UITextFieldDelegate {}
+
+extension CommonAuthView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case nameTextField: contactTextField.becomeFirstResponder()
+        case contactTextField: passwordTextField.becomeFirstResponder()
+        case passwordTextField: passwordTextField.resignFirstResponder()
+        default: break
+        }
+        return true
+    }
+}
