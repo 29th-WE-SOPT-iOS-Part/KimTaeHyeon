@@ -7,6 +7,7 @@
 
 import UIKit
 
+import FirebaseAuth
 import SnapKit
 
 class GoogleSignUpViewController: UIViewController {
@@ -39,11 +40,26 @@ class GoogleSignUpViewController: UIViewController {
     }
     
     private func setupAction() {
-        signUpView.confirmButton.press {
-            let confirmVC = GoogleConfirmViewController()
-            confirmVC.name = self.signUpView.name()
-            confirmVC.modalPresentationStyle = .fullScreen
-            self.present(confirmVC, animated: true, completion: nil)
+        signUpView.confirmButton.press { [weak self] in
+            self?.signUpAction()
         }
+    }
+
+    private func signUpAction() {
+        guard let userInfo = signUpView.userInfo() else { return }
+        FirebaseAuth.Auth.auth().createUser(withEmail: userInfo.email, password: userInfo.password) { [weak self] (result, error) in
+            if error != nil {
+                print("회원가입 실패")
+            } else {
+                self?.goToConfirmVC()
+            }
+        }
+    }
+    
+    private func goToConfirmVC() {
+        let confirmVC = GoogleConfirmViewController()
+        confirmVC.name = self.signUpView.name()
+        confirmVC.modalPresentationStyle = .fullScreen
+        self.present(confirmVC, animated: true, completion: nil)
     }
 }

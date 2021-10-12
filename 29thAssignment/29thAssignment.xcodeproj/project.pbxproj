@@ -27,6 +27,7 @@
 		BDFBB32A2715731000271907 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB3292715731000271907 /* PaddingLabel.swift */; };
 		BDFBB32C271573BC00271907 /* BaeminStyleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB32B271573BC00271907 /* BaeminStyleTextField.swift */; };
 		BDFBB32F271573E700271907 /* TextFieldGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB32E271573E700271907 /* TextFieldGenerator.swift */; };
+		BDFBB36B2715EB0D00271907 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDFBB36A2715EB0D00271907 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		BDFBB3292715731000271907 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		BDFBB32B271573BC00271907 /* BaeminStyleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminStyleTextField.swift; sourceTree = "<group>"; };
 		BDFBB32E271573E700271907 /* TextFieldGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldGenerator.swift; sourceTree = "<group>"; };
+		BDFBB36A2715EB0D00271907 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E97EF9AD960604173160C552 /* Pods-29thAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29thAssignment.release.xcconfig"; path = "Target Support Files/Pods-29thAssignment/Pods-29thAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,6 +139,7 @@
 		BDBD59332709E7B400AC85BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BDFBB36A2715EB0D00271907 /* GoogleService-Info.plist */,
 				BDBD59252709E6BD00AC85BF /* Assets.xcassets */,
 				BDBD592A2709E6BD00AC85BF /* Info.plist */,
 			);
@@ -271,6 +274,7 @@
 			files = (
 				BDBD59292709E6BD00AC85BF /* LaunchScreen.storyboard in Resources */,
 				BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */,
+				BDFBB36B2715EB0D00271907 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.taekkiDev.-9thAssignment";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekki.dev.29thAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -506,7 +510,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.taekkiDev.-9thAssignment";
+				PRODUCT_BUNDLE_IDENTIFIER = com.taekki.dev.29thAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
