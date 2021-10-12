@@ -105,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				BDBD59272709E6BD00AC85BF /* LaunchScreen.storyboard */,
+				BDBD594D270A0D8600AC85BF /* Common */,
 				BDBD59422709EDDE00AC85BF /* Google */,
 			);
 			path = Views;
@@ -167,7 +168,6 @@
 		BDBD59422709EDDE00AC85BF /* Google */ = {
 			isa = PBXGroup;
 			children = (
-				BDBD594D270A0D8600AC85BF /* Common */,
 				BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */,
 				BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */,
 				BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */,
