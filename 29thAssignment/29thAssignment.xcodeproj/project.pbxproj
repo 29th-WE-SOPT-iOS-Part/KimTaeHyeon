@@ -24,6 +24,7 @@
 		BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */; };
 		BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */; };
 		BDFBB3282715661A00271907 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB3272715661A00271907 /* UIButton+Extension.swift */; };
+		BDFBB32A2715731000271907 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB3292715731000271907 /* PaddingLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleConfirmViewController.swift; sourceTree = "<group>"; };
 		BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		BDFBB3272715661A00271907 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		BDFBB3292715731000271907 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		E97EF9AD960604173160C552 /* Pods-29thAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29thAssignment.release.xcconfig"; path = "Target Support Files/Pods-29thAssignment/Pods-29thAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -180,6 +182,7 @@
 			children = (
 				BD722C9027107C0F00B9CC56 /* CommonTextField.swift */,
 				BD747CD427114979007B5274 /* CommonAuthView.swift */,
+				BDFBB3292715731000271907 /* PaddingLabel.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */,
 				BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */,
 				BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */,
+				BDFBB32A2715731000271907 /* PaddingLabel.swift in Sources */,
 				BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */,
 				BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */,
 				BDFBB3282715661A00271907 /* UIButton+Extension.swift in Sources */,
