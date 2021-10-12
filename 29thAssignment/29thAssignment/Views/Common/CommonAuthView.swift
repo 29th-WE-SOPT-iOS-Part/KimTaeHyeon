@@ -31,6 +31,18 @@ struct Const {
     }
 }
 
+struct GoogleUserInfo {
+    var name: String
+    var email: String
+    var password: String
+    
+    init(name: String, email: String, password: String) {
+        self.name = name
+        self.email = email
+        self.password = password
+    }
+}
+
 final class CommonAuthView: UIView {
     // MARK: - Enum
     
@@ -196,6 +208,17 @@ final class CommonAuthView: UIView {
     public func name() -> String {
         guard let name = nameTextField.text else { return "알 수 없음" }
         return name.isEmpty ? "알 수 없음" : name
+    }
+    
+    @discardableResult
+    public func userInfo() -> GoogleUserInfo? {
+        guard let name = nameTextField.text, name.isNotEmpty,
+              let contact = contactTextField.text, contact.isNotEmpty,
+              let password = passwordTextField.text, password.isNotEmpty  else {
+                  return nil
+              }
+        
+        return GoogleUserInfo(name: name, email: contact, password: password)
     }
     
     // MARK: - Objc Functions
