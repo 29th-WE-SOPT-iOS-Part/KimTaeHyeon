@@ -63,7 +63,7 @@ class BaeminStyleTextField: UITextField, TextFieldGenerator {
     }
     
     /// 커서 색상 (기본 색상 : systemMint, 배민 메인 컬러와 유사)
-    open var cursorColor: UIColor = .systemMint {
+    open var cursorColor: UIColor = Const.Color.googleBlue {
         didSet {
             updatePlaceholder()
         }
@@ -104,7 +104,7 @@ class BaeminStyleTextField: UITextField, TextFieldGenerator {
     // MARK: - Setup
     
     private func setupDefault() {
-        delegate = self
+        self.delegate = self
         setupAttributes()
         updateBorder()
         updatePlaceholder()
@@ -141,7 +141,7 @@ class BaeminStyleTextField: UITextField, TextFieldGenerator {
     
     private func animateActiveStateViews() {
         let scale = 0.7
-        let translationX = (placeholderLabel.frame.width - placeholderLabel.frame.width * scale) / 2 + 5
+        let translationX = (placeholderLabel.frame.width - placeholderLabel.frame.width * scale) / 2
         let translationY = frame.height / 2
 
         UIView.animate(withDuration: 0.3, animations: { [weak self] in

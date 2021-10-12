@@ -78,10 +78,19 @@ final class CommonAuthView: UIView {
     /**
         텍스트 필드
      */
-    private var nameTextField = CommonTextField(placeholder: TextFieldType.name.placeholder)
-    private var contactTextField = CommonTextField(placeholder: TextFieldType.contact.placeholder)
-    private var passwordTextField = CommonTextField(placeholder: TextFieldType.password.placeholder,
-                                                    textFieldType: .password)
+    private var nameTextField = BaeminStyleTextField().then {
+        $0.titleText = "아이디"
+        $0.activeBorderColor = Const.Color.googleBlue
+    }
+    private var contactTextField = BaeminStyleTextField().then {
+        $0.titleText = "이메일 또는 전화번호"
+        $0.activeBorderColor = Const.Color.googleBlue
+    }
+    private var passwordTextField = BaeminStyleTextField().then {
+        $0.titleText = "비밀번호"
+        $0.activeBorderColor = Const.Color.googleBlue
+        $0.isSecureTextEntry = true
+    }
     
     /**
         버튼
@@ -171,7 +180,6 @@ final class CommonAuthView: UIView {
     
     private func setupTextFields() {
         [nameTextField, contactTextField, passwordTextField].forEach {
-            $0.delegate = self
             $0.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
         }
     }
@@ -197,6 +205,12 @@ final class CommonAuthView: UIView {
         let hasTextInAllTextFields = nameTextField.hasText && contactTextField.hasText && passwordTextField.hasText
         confirmButton.isEnabled = hasTextInAllTextFields
         confirmButton.backgroundColor = hasTextInAllTextFields ? Const.Color.googleBlue : . lightGray
+    }
+    
+    // MARK: - Overriding
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.endEditing(true)
     }
 }
 
@@ -252,19 +266,5 @@ extension CommonAuthView {
             $0.leading.trailing.equalToSuperview().inset(Const.Figure.guidePadding)
             $0.height.equalTo(45)
         }
-    }
-}
-
-// MARK: - TextField Delegate
-
-extension CommonAuthView: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        switch textField {
-        case nameTextField: contactTextField.becomeFirstResponder()
-        case contactTextField: passwordTextField.becomeFirstResponder()
-        case passwordTextField: passwordTextField.resignFirstResponder()
-        default: break
-        }
-        return true
     }
 }
