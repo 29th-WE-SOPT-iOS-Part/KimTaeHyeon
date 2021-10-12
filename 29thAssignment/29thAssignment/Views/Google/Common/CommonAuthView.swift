@@ -125,8 +125,7 @@ final class CommonAuthView: UIView {
     
     private var passwordSecureFlag: Bool = false {
         didSet {
-            passwordSecureFlag ?
-            passwordToggleButton.setImage(Const.Image.checkmarkFill, for: .normal) : passwordToggleButton.setImage(UIImage(systemName: "square"), for: .normal)
+            passwordSecureFlag ? passwordToggleButton.setImage(Const.Image.checkmarkFill, for: .normal) : passwordToggleButton.setImage(UIImage(systemName: "square"), for: .normal)
         }
     }
     
@@ -180,6 +179,7 @@ final class CommonAuthView: UIView {
     private func setupButtonActions() {
         passwordToggleButton.press { [weak self] in
             self?.passwordSecureFlag.toggle()
+            self?.passwordTextField.isSecureTextEntry.toggle()
         }
     }
     
