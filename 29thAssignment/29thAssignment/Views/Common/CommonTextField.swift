@@ -11,8 +11,20 @@ import UIKit
  텍스트 필드 타입 구분 Enum
  */
 enum TextFieldType {
-    case basic
+    case name
+    case contact
     case password
+    
+    var placeholder: String {
+        switch self {
+        case .name:
+            return "이름을 입력해주세요"
+        case .contact:
+            return "이메일 또는 휴대전화"
+        case .password:
+            return "비밀번호 입력"
+        }
+    }
 }
 
 class CommonTextField: UITextField {

@@ -7,8 +7,8 @@
 
 import UIKit
 
-import Then
 import SnapKit
+import Then
 
 class GoogleConfirmViewController: UIViewController {
     
@@ -23,13 +23,12 @@ class GoogleConfirmViewController: UIViewController {
     
     private let googleLabel = UILabel().then {
         $0.text = "Google"
-        $0.font = UIFont.systemFont(ofSize: 44, weight: .bold)
+        $0.font = UIFont.boldSystemFont(ofSize: 44)
         $0.textAlignment = .center
-        $0.textColor = UIColor(red: 66/255, green: 133/255, blue: 244/255, alpha: 1)
+        $0.textColor = Const.Color.googleBlue
     }
     
     private let messageLabel = UILabel().then {
-        $0.text = "OOO님\n환영합니다!"
         $0.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
         $0.textAlignment = .center
         $0.numberOfLines = 0
@@ -38,8 +37,8 @@ class GoogleConfirmViewController: UIViewController {
     private lazy var confirmButton = UIButton().then {
         $0.setTitle("확인", for: .normal)
         $0.setTitleColor(.white, for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .bold)
-        $0.backgroundColor = UIColor(red: 66/255, green: 133/255, blue: 244/255, alpha: 1)
+        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        $0.backgroundColor = Const.Color.googleBlue
         $0.layer.cornerRadius = 10
     }
 
@@ -62,8 +61,7 @@ class GoogleConfirmViewController: UIViewController {
         
         view.addSubview(verticalStackView)
         verticalStackView.snp.makeConstraints {
-            $0.left.equalToSuperview().offset(24)
-            $0.right.equalToSuperview().inset(24)
+            $0.leading.trailing.equalToSuperview().inset(Const.Figure.guidePadding)
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview().offset(-80)
         }
