@@ -7,9 +7,10 @@
 
 import UIKit
 
-class SubscriptionViewController: UITabBarController {
+class SubscriptionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
     }
 }

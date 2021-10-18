@@ -7,9 +7,10 @@
 
 import UIKit
 
-class PlusViewController: UITabBarController {
+class PlusViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
     }
 }

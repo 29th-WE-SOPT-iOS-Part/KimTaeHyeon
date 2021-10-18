@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ShortsViewController: UITabBarController {
+class ShortsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
     }
 }
