@@ -35,12 +35,14 @@ class GoogleConfirmViewController: UIViewController {
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         $0.backgroundColor = Const.Color.googleBlue
         $0.layer.cornerRadius = 4
+        $0.addTarget(self, action: #selector(confirmButtonDidTap), for: .touchUpInside)
     }
     
-    private lazy var signInWithAnotherAccountButton = UIButton().then {
+    let signInWithAnotherAccountButton = UIButton().then {
         $0.setTitle("다른 계정으로 로그인하기", for: .normal)
         $0.setTitleColor(Const.Color.googleBlue, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        $0.addTarget(self, action: #selector(signInWithAnotherAccountButtonDidTap), for: .touchUpInside)
     }
 
     // MARK: - Life Cycle
@@ -89,6 +91,29 @@ class GoogleConfirmViewController: UIViewController {
     private func setupMessage() {
         if let name = self.name {
             messageLabel.text = "\(name)님\n환영합니다!"
+        }
+    }
+    
+    // MARK: - Objc Functions
+    @objc
+    private func confirmButtonDidTap() {
+        // 이 부분은 전역함수, 익스텐션으로 만들어놓아도 될 것 같음
+        guard let window = self.view.window else { return }
+        
+        let transition = CATransition()
+        transition.type = .fade
+        transition.duration = 0.2
+        
+        window.layer.add(transition, forKey: kCATransition)
+        window.rootViewController = BaseTabBarController()
+        window.makeKeyAndVisible()
+    }
+    
+    @objc
+    func signInWithAnotherAccountButtonDidTap() {
+        guard let parentVC = presentingViewController as? UINavigationController else { return }
+        dismiss(animated: true) {
+            parentVC.popToRootViewController(animated: true)
         }
     }
 }
