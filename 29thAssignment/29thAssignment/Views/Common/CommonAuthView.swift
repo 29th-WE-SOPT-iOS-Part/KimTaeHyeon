@@ -52,13 +52,12 @@ final class CommonAuthView: UIView {
     }
     private var titleLabel = UILabel().then {
         $0.textAlignment = .center
-        $0.font = UIFont.systemFont(ofSize: 28, weight: .semibold)
+        $0.font = UIFont.systemFont(ofSize: 22, weight: .semibold)
     }
     private var descriptionLabel = UILabel().then {
         $0.text = Const.Text.authDescription
-        $0.textColor = .systemGray
         $0.textAlignment = .center
-        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         $0.numberOfLines = 0
     }
     
@@ -66,19 +65,19 @@ final class CommonAuthView: UIView {
         텍스트 필드
      */
     private var nameTextField = BaeminStyleTextField().then {
-        $0.titleText = "아이디"
+        $0.titleText = "이름을 입력해주세요"
         $0.activeBorderColor = Const.Color.googleBlue
         $0.borderSize = 1
         $0.cornerRadius = 8
     }
     private var contactTextField = BaeminStyleTextField().then {
-        $0.titleText = "이메일 또는 전화번호"
+        $0.titleText = "이메일 또는 휴대전화"
         $0.activeBorderColor = Const.Color.googleBlue
         $0.borderSize = 1
         $0.cornerRadius = 8
     }
     private var passwordTextField = BaeminStyleTextField().then {
-        $0.titleText = "비밀번호"
+        $0.titleText = "비밀번호 입력"
         $0.activeBorderColor = Const.Color.googleBlue
         $0.borderSize = 1
         $0.cornerRadius = 8
@@ -92,18 +91,20 @@ final class CommonAuthView: UIView {
         $0.setTitle("비밀번호 표시", for: .normal)
         $0.setTitleColor(.darkGray, for: .normal)
         $0.setImage(Const.Image.checkmarkEmpty, for: .normal)
-        $0.tintColor = .darkGray
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        $0.tintColor = .systemGray5
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
         $0.contentHorizontalAlignment = .leading
     }
     lazy var signUpButton = UIButton().then {
-        $0.setTitle("계정만들기", for: .normal)
+        $0.setTitle("계정 만들기", for: .normal)
         $0.setTitleColor(Const.Color.googleBlue, for: .normal)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         $0.contentHorizontalAlignment = .leading
     }
     lazy var confirmButton = UIButton().then {
         $0.setTitle("다음", for: .normal)
         $0.setTitleColor(.white, for: .normal)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         $0.isEnabled = false
         $0.backgroundColor = .lightGray
         $0.layer.cornerRadius = 4
@@ -159,7 +160,7 @@ final class CommonAuthView: UIView {
     
     private func setupSignInView() {
         titleLabel.text = AuthType.SignIn.title
-        descriptionLabel.textColor = .systemGray
+        descriptionLabel.textColor = .black
         passwordToggleButton.isHidden = true
         signUpButton.isHidden = false
     }
