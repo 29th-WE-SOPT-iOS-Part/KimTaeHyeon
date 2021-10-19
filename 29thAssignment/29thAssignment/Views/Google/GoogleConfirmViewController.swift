@@ -16,20 +16,15 @@ class GoogleConfirmViewController: UIViewController {
     var name: String?
     
     // MARK: - UI Properties
-    private let verticalStackView = UIStackView().then {
-        $0.axis = .vertical
-        $0.spacing = 20
-    }
     
-    private let googleLabel = UILabel().then {
-        $0.text = "Google"
-        $0.font = UIFont.boldSystemFont(ofSize: 44)
-        $0.textAlignment = .center
-        $0.textColor = Const.Color.googleBlue
+    private var logoImageView = UIImageView().then {
+        $0.image = Const.Image.logo
+        $0.contentMode = .scaleAspectFill
+        $0.clipsToBounds = true
     }
     
     private let messageLabel = UILabel().then {
-        $0.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
+        $0.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
         $0.textAlignment = .center
         $0.numberOfLines = 0
     }
@@ -37,9 +32,15 @@ class GoogleConfirmViewController: UIViewController {
     private lazy var confirmButton = UIButton().then {
         $0.setTitle("확인", for: .normal)
         $0.setTitleColor(.white, for: .normal)
-        $0.titleLabel?.font = UIFont.boldSystemFont(ofSize: 17)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         $0.backgroundColor = Const.Color.googleBlue
-        $0.layer.cornerRadius = 10
+        $0.layer.cornerRadius = 4
+    }
+    
+    private lazy var signInWithAnotherAccountButton = UIButton().then {
+        $0.setTitle("다른 계정으로 로그인하기", for: .normal)
+        $0.setTitleColor(Const.Color.googleBlue, for: .normal)
+        $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
     }
 
     // MARK: - Life Cycle
@@ -56,16 +57,32 @@ class GoogleConfirmViewController: UIViewController {
     }
     
     private func setupLayout() {
-        confirmButton.snp.makeConstraints { $0.height.equalTo(45) }
-        verticalStackView.addArrangedSubviews(googleLabel, messageLabel, confirmButton)
         
-        view.addSubview(verticalStackView)
-        verticalStackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(Const.Figure.guidePadding)
+        view.addSubviews(logoImageView, messageLabel, confirmButton, signInWithAnotherAccountButton)
+        
+        logoImageView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(248)
+            $0.width.equalTo(118)
+            $0.height.equalTo(40)
             $0.centerX.equalToSuperview()
-            $0.centerY.equalToSuperview().offset(-80)
         }
-        verticalStackView.setCustomSpacing(60, after: messageLabel)
+        
+        messageLabel.snp.makeConstraints {
+            $0.top.equalTo(logoImageView.snp.bottom).offset(23)
+            $0.centerX.equalToSuperview()
+        }
+        
+        confirmButton.snp.makeConstraints {
+            $0.top.equalTo(messageLabel.snp.bottom).offset(53)
+            $0.leading.trailing.equalToSuperview().inset(Const.Figure.sidePadding)
+            $0.height.equalTo(42)
+        }
+        
+        signInWithAnotherAccountButton.snp.makeConstraints {
+            $0.top.equalTo(confirmButton.snp.bottom).offset(23)
+            $0.leading.trailing.equalToSuperview().inset(Const.Figure.sidePadding) // 터치 영역을 고려해서 너비를 늘림.
+            $0.height.equalTo(22)
+        }
     }
     
     // MARK: - Private Functions

@@ -50,15 +50,6 @@ final class CommonAuthView: UIView {
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
     }
-    /**
-        라벨
-     */
-    private var logoLabel = UILabel().then {
-        $0.text = "Google"
-        $0.textColor = Const.Color.googleBlue
-        $0.textAlignment = .center
-        $0.font = UIFont.boldSystemFont(ofSize: 44)
-    }
     private var titleLabel = UILabel().then {
         $0.textAlignment = .center
         $0.font = UIFont.systemFont(ofSize: 28, weight: .semibold)
@@ -77,14 +68,20 @@ final class CommonAuthView: UIView {
     private var nameTextField = BaeminStyleTextField().then {
         $0.titleText = "아이디"
         $0.activeBorderColor = Const.Color.googleBlue
+        $0.borderSize = 1
+        $0.cornerRadius = 8
     }
     private var contactTextField = BaeminStyleTextField().then {
         $0.titleText = "이메일 또는 전화번호"
         $0.activeBorderColor = Const.Color.googleBlue
+        $0.borderSize = 1
+        $0.cornerRadius = 8
     }
     private var passwordTextField = BaeminStyleTextField().then {
         $0.titleText = "비밀번호"
         $0.activeBorderColor = Const.Color.googleBlue
+        $0.borderSize = 1
+        $0.cornerRadius = 8
         $0.isSecureTextEntry = true
     }
     
@@ -234,7 +231,7 @@ extension CommonAuthView {
         )
         
         logoImageView.snp.makeConstraints {
-            $0.top.equalTo(safeAreaLayoutGuide.snp.top).offset(60)
+            $0.top.equalToSuperview().offset(110)
             $0.width.equalTo(118)
             $0.height.equalTo(40)
             $0.centerX.equalToSuperview()
@@ -257,7 +254,7 @@ extension CommonAuthView {
         
         [nameTextField, contactTextField, passwordTextField].forEach { textField in
             textField.snp.makeConstraints {
-                $0.height.equalTo(50)
+                $0.height.equalTo(48)
             }
         }
         
