@@ -30,8 +30,9 @@ struct Const {
         static let homeIconFill = UIImage(named: "homeIconFill")
         static let LibraryIcon = UIImage(named: "LibraryIcon")
         static let LibraryIconFill = UIImage(named: "LibraryIconFill")
-        static let plueCircleIcon = UIImage(named: "plueCircleIcon")
+        static let plusCircleIcon = UIImage(named: "plusCircleIcon")
         static let shortsIcon = UIImage(named: "shortsIcon")
+        static let shortsIconFill = UIImage(named: "shortsIconFill")
         static let subscriptionsIcon = UIImage(named: "subscriptionsIcon")
         static let subscriptionsIconFill = UIImage(named: "subscriptionsIconFill")
     }
