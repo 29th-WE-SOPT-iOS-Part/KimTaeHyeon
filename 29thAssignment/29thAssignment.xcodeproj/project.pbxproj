@@ -31,6 +31,10 @@
 		BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */; };
 		BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */; };
 		BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */; };
+		BDF3E86E27204AB9000BFA1C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF3E86D27204AB9000BFA1C /* Font.swift */; };
+		BDF3E87327204B57000BFA1C /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDF3E87027204B56000BFA1C /* SF-Pro-Display-Regular.otf */; };
+		BDF3E87427204B57000BFA1C /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDF3E87127204B56000BFA1C /* SF-Pro-Display-Medium.otf */; };
+		BDF3E87527204B57000BFA1C /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDF3E87227204B56000BFA1C /* SF-Pro-Display-Semibold.otf */; };
 		BDFBB3282715661A00271907 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB3272715661A00271907 /* UIButton+Extension.swift */; };
 		BDFBB32A2715731000271907 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB3292715731000271907 /* PaddingLabel.swift */; };
 		BDFBB32C271573BC00271907 /* BaeminStyleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFBB32B271573BC00271907 /* BaeminStyleTextField.swift */; };
@@ -66,6 +70,10 @@
 		BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleConfirmViewController.swift; sourceTree = "<group>"; };
 		BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		BDF3E86D27204AB9000BFA1C /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		BDF3E87027204B56000BFA1C /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		BDF3E87127204B56000BFA1C /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
+		BDF3E87227204B56000BFA1C /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		BDFBB3272715661A00271907 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		BDFBB3292715731000271907 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		BDFBB32B271573BC00271907 /* BaeminStyleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaeminStyleTextField.swift; sourceTree = "<group>"; };
@@ -209,6 +217,7 @@
 		BDBD59332709E7B400AC85BF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BDF3E86F27204AC8000BFA1C /* Fonts */,
 				BDFBB36A2715EB0D00271907 /* GoogleService-Info.plist */,
 				BDBD59252709E6BD00AC85BF /* Assets.xcassets */,
 				BDBD592A2709E6BD00AC85BF /* Info.plist */,
@@ -219,6 +228,7 @@
 		BDBD59342709E7BF00AC85BF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BDF3E86A27204AA7000BFA1C /* Enums */,
 				BD68364B271DC87700C24BB6 /* Constants */,
 				BDFBB32D271573DA00271907 /* Protocols */,
 				BDBD59352709E7C400AC85BF /* Extensions */,
@@ -266,6 +276,24 @@
 				BDFBB32B271573BC00271907 /* BaeminStyleTextField.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BDF3E86A27204AA7000BFA1C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BDF3E86D27204AB9000BFA1C /* Font.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		BDF3E86F27204AC8000BFA1C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BDF3E87127204B56000BFA1C /* SF-Pro-Display-Medium.otf */,
+				BDF3E87027204B56000BFA1C /* SF-Pro-Display-Regular.otf */,
+				BDF3E87227204B56000BFA1C /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		BDFBB32D271573DA00271907 /* Protocols */ = {
@@ -344,9 +372,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF3E87527204B57000BFA1C /* SF-Pro-Display-Semibold.otf in Resources */,
 				BDBD59292709E6BD00AC85BF /* LaunchScreen.storyboard in Resources */,
 				BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */,
+				BDF3E87327204B57000BFA1C /* SF-Pro-Display-Regular.otf in Resources */,
 				BDFBB36B2715EB0D00271907 /* GoogleService-Info.plist in Resources */,
+				BDF3E87427204B57000BFA1C /* SF-Pro-Display-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +450,7 @@
 				BDFBB32C271573BC00271907 /* BaeminStyleTextField.swift in Sources */,
 				BD683642271DC83800C24BB6 /* HomeViewController.swift in Sources */,
 				BD68364D271DC88700C24BB6 /* Const.swift in Sources */,
+				BDF3E86E27204AB9000BFA1C /* Font.swift in Sources */,
 				BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */,
 				BD683648271DC84F00C24BB6 /* SubscriptionViewController.swift in Sources */,
 				BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */,
