@@ -24,7 +24,7 @@ class GoogleConfirmViewController: UIViewController {
     }
     
     private let messageLabel = UILabel().then {
-        $0.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
+        $0.font = TextStyle.welcomeMessage.font
         $0.textAlignment = .center
         $0.numberOfLines = 0
     }
@@ -32,7 +32,7 @@ class GoogleConfirmViewController: UIViewController {
     private lazy var confirmButton = UIButton().then {
         $0.setTitle("확인", for: .normal)
         $0.setTitleColor(.white, for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        $0.titleLabel?.font = TextStyle.buttonFill.font
         $0.backgroundColor = Const.Color.googleBlue
         $0.layer.cornerRadius = 4
         $0.addTarget(self, action: #selector(confirmButtonDidTap), for: .touchUpInside)
@@ -41,7 +41,7 @@ class GoogleConfirmViewController: UIViewController {
     let signInWithAnotherAccountButton = UIButton().then {
         $0.setTitle("다른 계정으로 로그인하기", for: .normal)
         $0.setTitleColor(Const.Color.googleBlue, for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        $0.titleLabel?.font = TextStyle.buttonPlain.font
         $0.addTarget(self, action: #selector(signInWithAnotherAccountButtonDidTap), for: .touchUpInside)
     }
 
