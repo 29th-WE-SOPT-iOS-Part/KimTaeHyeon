@@ -57,9 +57,9 @@ class BaseTabBarController: UITabBarController {
         let navViewControllers = [homeNavVC, shortsNavVC, plusNavVC, subscriptionNavVC, libraryNavVC]
 
         for i in 0..<navViewControllers.count {
-            navViewControllers[i].tabBarItem.selectedImage = selectedImages[i]
-            navViewControllers[i].tabBarItem.image = images[i]
-            navViewControllers[i].tabBarItem.title = imageTitle[i]
+            navViewControllers[i].tabBarItem = UITabBarItem(title: imageTitle[i],
+                                                            image: images[i],
+                                                            selectedImage: selectedImages[i])
         }
         
         viewControllers = navViewControllers
