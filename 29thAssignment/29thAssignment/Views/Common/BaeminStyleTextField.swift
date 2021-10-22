@@ -165,6 +165,16 @@ class BaeminStyleTextField: UITextField, TextFieldGenerator {
             self?.placeholderLabel.transform = CGAffineTransform.identity
         })
     }
+    
+    // 텍스트와 애니메이션을 초기화 해주는 커스텀 함수
+    public func clearEffects() {
+        text = ""
+        updateBorder()
+        updatePlaceholder()
+        if !hasText {
+            animateInactiveStateViews()
+        }
+    }
 }
 
 extension BaeminStyleTextField: UITextFieldDelegate {

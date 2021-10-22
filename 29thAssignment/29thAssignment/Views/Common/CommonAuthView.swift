@@ -206,6 +206,18 @@ final class CommonAuthView: UIView {
         return GoogleUserInfo(name: name, email: contact, password: password)
     }
     
+    /**
+     화면 다시 돌아왔을 때, 텍스트 필드를 초기화 해주기 위한 함수
+     
+     *참고*
+     clearEffects() 메서드는 텍스트와 애니메이션을 초기화 해주는 커스텀 함수
+     */
+    public func clearTextFields() {
+        [nameTextField, contactTextField, passwordTextField].forEach {
+            $0.clearEffects()
+        }
+    }
+    
     // MARK: - Objc Functions
 
     @objc
