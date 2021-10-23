@@ -11,14 +11,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let googleSignInViewController = GoogleSignInViewController()
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(rootViewController: googleSignInViewController)
+        window?.rootViewController = UINavigationController(rootViewController: GoogleSignInViewController())
         window?.makeKeyAndVisible()
     }
 }
-

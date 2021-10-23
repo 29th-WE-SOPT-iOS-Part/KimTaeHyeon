@@ -116,7 +116,16 @@ class BaeminStyleTextField: UITextField, TextFieldGenerator {
     }
     
     private func setupLayout() {
-        self.superview?.addSubview(placeholderLabel)
+        /**
+         해당 부분에서 guard ~ let으로 처리해주지 않으면 앱이 터진다.
+         - 순환 참조에 대한 경고 발생
+         - 오토레이아웃을 정상적으로 잡지 못함
+        
+         기존 코드
+         self.superview?.addSubview(placeholderLabel)
+         */
+        guard let superview = self.superview else { return }
+        superview.addSubview(placeholderLabel)
         placeholderLabel.snp.makeConstraints {
             $0.left.equalTo(self.snp.left).offset(5)
             $0.centerY.equalTo(self.snp.centerY)
@@ -155,6 +164,16 @@ class BaeminStyleTextField: UITextField, TextFieldGenerator {
         UIView.animate(withDuration: 0.3, animations: { [weak self] in
             self?.placeholderLabel.transform = CGAffineTransform.identity
         })
+    }
+    
+    // 텍스트와 애니메이션을 초기화 해주는 커스텀 함수
+    public func clearEffects() {
+        text = ""
+        updateBorder()
+        updatePlaceholder()
+        if !hasText {
+            animateInactiveStateViews()
+        }
     }
 }
 

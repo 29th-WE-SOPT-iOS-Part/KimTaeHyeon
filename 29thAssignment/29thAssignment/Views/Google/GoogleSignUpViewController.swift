@@ -23,6 +23,11 @@ class GoogleSignUpViewController: UIViewController {
         setupAction()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        signUpView.clearTextFields()
+    }
+    
     // MARK: - Setup Functions
     private func setupAttribute() {
         setupNavigationBar()
