@@ -1,21 +1,80 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FeedTableViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FeedTableViewCell" customModule="_9thAssignment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="306"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptiOSPart" translatesAutoresizingMaskIntoConstraints="NO" id="ZXr-NY-zPG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="ZXr-NY-zPG" secondAttribute="height" multiplier="375:212" id="9h0-Gf-MOh"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wesoptProfile" translatesAutoresizingMaskIntoConstraints="NO" id="dOG-Tp-yn2">
+                        <rect key="frame" x="12" y="223" width="36" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="dOG-Tp-yn2" secondAttribute="height" multiplier="1:1" id="sMc-JT-UbH"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WE SOPT · 조회수 100만회 · 3주 전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zsw-ko-FCR">
+                        <rect key="frame" x="60" y="265.33333333333331" width="270" height="15.666666666666686"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dc-T1-DJM">
+                        <rect key="frame" x="349" y="219" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="5Dc-T1-DJM" secondAttribute="height" multiplier="1:1" id="G2k-bg-eqV"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="moreMenuIcon"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2차 iOS 세미나 : AutoLayout, StackView, TabBarController" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5k-DP-atB">
+                        <rect key="frame" x="60" y="223" width="270" height="38.333333333333314"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zsw-ko-FCR" firstAttribute="top" secondItem="W5k-DP-atB" secondAttribute="bottom" constant="4" id="5EG-eG-EwF"/>
+                    <constraint firstItem="dOG-Tp-yn2" firstAttribute="top" secondItem="ZXr-NY-zPG" secondAttribute="bottom" constant="11" id="DNd-FW-AGJ"/>
+                    <constraint firstItem="ZXr-NY-zPG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Dez-Hc-kxW"/>
+                    <constraint firstItem="W5k-DP-atB" firstAttribute="top" secondItem="dOG-Tp-yn2" secondAttribute="top" id="FNN-z5-1zk"/>
+                    <constraint firstAttribute="trailing" secondItem="5Dc-T1-DJM" secondAttribute="trailing" id="GlV-gs-WRv"/>
+                    <constraint firstItem="5Dc-T1-DJM" firstAttribute="top" secondItem="ZXr-NY-zPG" secondAttribute="bottom" constant="7" id="Ipu-SN-Qun"/>
+                    <constraint firstItem="dOG-Tp-yn2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="LTW-08-4Ss"/>
+                    <constraint firstItem="W5k-DP-atB" firstAttribute="leading" secondItem="dOG-Tp-yn2" secondAttribute="trailing" constant="12" id="Umf-Mb-aV3"/>
+                    <constraint firstItem="ZXr-NY-zPG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="j3g-ha-VIc"/>
+                    <constraint firstAttribute="bottom" secondItem="dOG-Tp-yn2" secondAttribute="bottom" constant="47" id="pMv-I5-t5l"/>
+                    <constraint firstAttribute="bottom" secondItem="5Dc-T1-DJM" secondAttribute="bottom" constant="61" id="pSv-Fq-fe8"/>
+                    <constraint firstItem="Zsw-ko-FCR" firstAttribute="leading" secondItem="W5k-DP-atB" secondAttribute="leading" id="vzf-fq-bIE"/>
+                    <constraint firstItem="Zsw-ko-FCR" firstAttribute="trailing" secondItem="W5k-DP-atB" secondAttribute="trailing" id="xE9-ca-50J"/>
+                    <constraint firstItem="5Dc-T1-DJM" firstAttribute="leading" secondItem="W5k-DP-atB" secondAttribute="trailing" constant="19" id="xXk-TA-5PL"/>
+                    <constraint firstAttribute="trailing" secondItem="ZXr-NY-zPG" secondAttribute="trailing" id="zip-bS-OMR"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="127" y="149"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="moreMenuIcon" width="26.333333969116211" height="26"/>
+        <image name="wesoptProfile" width="36" height="36"/>
+        <image name="wesoptiOSPart" width="375" height="212"/>
+    </resources>
 </document>
