@@ -15,6 +15,15 @@ class HomeViewController: UIViewController {
     // MARK: - UI properties
     
     var tableView = UITableView()
+    
+    // MARK: - Properties
+    var thumbnailImages = [
+        Const.Image.wesoptiOSPart,
+        Const.Image.wesoptAndroidpart,
+        Const.Image.wesoptPlanPart,
+        Const.Image.wesoptDesignPart,
+        Const.Image.wesoptServerPart,
+    ]
 
     // MARK: - Life cycles
     
@@ -23,12 +32,16 @@ class HomeViewController: UIViewController {
         setupHierarchy()
         setupLayout()
         setupTableView()
+        registerTableViewCell()
     }
     
     private func setupTableView() {
         tableView.dataSource = self
-        tableView.delegate = self
-        tableView.backgroundColor = .blue
+        tableView.separatorStyle = .none
+    }
+    
+    private func registerTableViewCell() {
+        tableView.register(FeedTableViewCell.self)
     }
     
     private func setupHierarchy() {
@@ -46,16 +59,15 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedTableViewCell
+        
+        cell.configureImage(thumbnailImage: thumbnailImages[indexPath.row % 5],
+                            profileImage: Const.Image.wesoptProfile)
+        
+        return cell
     }
-}
-
-//MARK: UITableViewDelegate
-
-extension HomeViewController: UITableViewDelegate {
-    
 }

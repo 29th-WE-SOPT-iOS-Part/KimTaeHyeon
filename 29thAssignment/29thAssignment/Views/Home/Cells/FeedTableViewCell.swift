@@ -38,4 +38,16 @@ class FeedTableViewCell: UITableViewCell {
         feedTitleLabel.text = feedTitle
         feedSubInformationLabel.text = feedSubInformation
     }
+    
+    // 이미지 설정 함수 (이미지만 테스트하려고 만든 함수)
+    public func configureImage(thumbnailImage: UIImage?,
+                               profileImage: UIImage?) {
+        if let thumbnailImage = thumbnailImage,
+           let profileImage = profileImage {
+            thumbnailImageView.image = thumbnailImage
+            profileImageView.image = profileImage
+        }
+    }
 }
+
+extension FeedTableViewCell: Reusable, NibLoadable {}
