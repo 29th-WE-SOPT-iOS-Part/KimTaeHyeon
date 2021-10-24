@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8D59A313F9A7C789E5DEF8EE /* Pods_29thAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F853999E454A923520C670 /* Pods_29thAssignment.framework */; };
+		BD1182F82725AF60002B0BFF /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1182F72725AF60002B0BFF /* UITableView+Extension.swift */; };
 		BD60EE76271C818A0051AF67 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */; };
 		BD683640271DC82A00C24BB6 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68363F271DC82A00C24BB6 /* BaseTabBarController.swift */; };
 		BD683642271DC83800C24BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD683641271DC83800C24BB6 /* HomeViewController.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		47F853999E454A923520C670 /* Pods_29thAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29thAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BA03D0CB54617A523F6A31 /* Pods-29thAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29thAssignment.debug.xcconfig"; path = "Target Support Files/Pods-29thAssignment/Pods-29thAssignment.debug.xcconfig"; sourceTree = "<group>"; };
+		BD1182F72725AF60002B0BFF /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		BD68363F271DC82A00C24BB6 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		BD683641271DC83800C24BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				BD722C922710819200B9CC56 /* UITextField+Extension.swift */,
 				BDFBB3272715661A00271907 /* UIButton+Extension.swift */,
 				BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */,
+				BD1182F72725AF60002B0BFF /* UITableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				BD68364D271DC88700C24BB6 /* Const.swift in Sources */,
 				BDF3E86E27204AB9000BFA1C /* Font.swift in Sources */,
 				BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */,
+				BD1182F82725AF60002B0BFF /* UITableView+Extension.swift in Sources */,
 				BD683648271DC84F00C24BB6 /* SubscriptionViewController.swift in Sources */,
 				BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */,
 				BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */,
