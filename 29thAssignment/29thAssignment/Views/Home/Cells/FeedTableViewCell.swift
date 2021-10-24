@@ -9,15 +9,33 @@ import UIKit
 
 class FeedTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var feedTitleLabel: UILabel!
+    @IBOutlet weak var feedSubInformationLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    // 재사용으로 인한 이슈 방지
+    override func prepareForReuse() {
+        thumbnailImageView.image = nil
+        profileImageView.image = nil
+    }
+    
+    // 데이터 설정 함수
+    public func configure(thumbnailImageUrl: String,
+                          profileImageUrl: String,
+                          feedTitle: String,
+                          feedSubInformation: String) {
+        
+        if let thumbnailImage = UIImage(named: thumbnailImageUrl),
+           let profileImage = UIImage(named: profileImageUrl) {
+            thumbnailImageView.image = thumbnailImage
+            profileImageView.image = profileImage
+        }
+        feedTitleLabel.text = feedTitle
+        feedSubInformationLabel.text = feedSubInformation
+    }
 }

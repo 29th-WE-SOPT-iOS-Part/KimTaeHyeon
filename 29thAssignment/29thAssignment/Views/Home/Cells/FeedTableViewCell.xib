@@ -69,6 +69,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="feedSubInformationLabel" destination="Zsw-ko-FCR" id="O1s-Tx-Uxc"/>
+                <outlet property="feedTitleLabel" destination="W5k-DP-atB" id="UIT-am-zTL"/>
+                <outlet property="profileImageView" destination="dOG-Tp-yn2" id="6pT-6h-u4E"/>
+                <outlet property="thumbnailImageView" destination="ZXr-NY-zPG" id="DTQ-iN-cIz"/>
+            </connections>
             <point key="canvasLocation" x="127" y="149"/>
         </tableViewCell>
     </objects>
