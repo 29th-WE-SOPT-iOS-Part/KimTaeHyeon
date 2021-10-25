@@ -7,6 +7,21 @@
 
 import UIKit
 
-class SubscriptionCollectionViewCell: UICollectionViewCell {
+class SubscriptionCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
+
+    @IBOutlet weak var subscriptionImageView: UIImageView!
+    @IBOutlet weak var subscriptionTitleLabel: UILabel!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    public func configure(subscriptionImage: UIImage?,
+                          title: String) {
+        if let subscriptionImage = subscriptionImage {
+            subscriptionImageView.image = subscriptionImage
+        }
+        subscriptionTitleLabel.text = title
+    }
 }

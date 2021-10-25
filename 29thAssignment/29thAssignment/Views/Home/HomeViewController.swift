@@ -37,11 +37,13 @@ class HomeViewController: UIViewController {
     
     private func setupTableView() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = .none
     }
     
     private func registerTableViewCell() {
         tableView.register(FeedTableViewCell.self)
+        tableView.register(SubscriptionListTableViewCell.self)
     }
     
     private func setupHierarchy() {
@@ -63,11 +65,26 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedTableViewCell
-        
-        cell.configureImage(thumbnailImage: thumbnailImages[indexPath.row % 5],
-                            profileImage: Const.Image.wesoptProfile)
-        
-        return cell
+        switch indexPath.row {
+        case 0:
+            let subscriptionCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SubscriptionListTableViewCell
+            return subscriptionCell
+        default:
+            let feedCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedTableViewCell
+            feedCell.configureImage(thumbnailImage: thumbnailImages[indexPath.row % 5],
+                                    profileImage: Const.Image.wesoptProfile)
+            return feedCell
+        }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 104
+        default:
+            return UITableView.automaticDimension
+        }
     }
 }
