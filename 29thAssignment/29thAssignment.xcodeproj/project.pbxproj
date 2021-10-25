@@ -21,6 +21,10 @@
 		BD722C9127107C0F00B9CC56 /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C9027107C0F00B9CC56 /* CommonTextField.swift */; };
 		BD722C932710819200B9CC56 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C922710819200B9CC56 /* UITextField+Extension.swift */; };
 		BD747CD527114979007B5274 /* CommonAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD747CD427114979007B5274 /* CommonAuthView.swift */; };
+		BD8C2F4A2726403400AB9342 /* SubscriptionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C2F482726403400AB9342 /* SubscriptionListTableViewCell.swift */; };
+		BD8C2F4B2726403400AB9342 /* SubscriptionListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8C2F492726403400AB9342 /* SubscriptionListTableViewCell.xib */; };
+		BD8C2F4D2726404800AB9342 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C2F4C2726404800AB9342 /* SubscriptionCollectionViewCell.swift */; };
+		BD8C2F4F272640F000AB9342 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C2F4E272640F000AB9342 /* UICollectionView+Extension.swift */; };
 		BD8FB11C2725B32300B03D6E /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8FB11A2725B32300B03D6E /* FeedTableViewCell.swift */; };
 		BD8FB11D2725B32300B03D6E /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8FB11B2725B32300B03D6E /* FeedTableViewCell.xib */; };
 		BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */; };
@@ -62,6 +66,10 @@
 		BD722C9027107C0F00B9CC56 /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
 		BD722C922710819200B9CC56 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BD747CD427114979007B5274 /* CommonAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAuthView.swift; sourceTree = "<group>"; };
+		BD8C2F482726403400AB9342 /* SubscriptionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionListTableViewCell.swift; sourceTree = "<group>"; };
+		BD8C2F492726403400AB9342 /* SubscriptionListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionListTableViewCell.xib; sourceTree = "<group>"; };
+		BD8C2F4C2726404800AB9342 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD8C2F4E272640F000AB9342 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		BD8FB11A2725B32300B03D6E /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		BD8FB11B2725B32300B03D6E /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		BDBD59192709E6BC00AC85BF /* 29thAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 29thAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +172,9 @@
 			children = (
 				BD8FB11A2725B32300B03D6E /* FeedTableViewCell.swift */,
 				BD8FB11B2725B32300B03D6E /* FeedTableViewCell.xib */,
+				BD8C2F482726403400AB9342 /* SubscriptionListTableViewCell.swift */,
+				BD8C2F492726403400AB9342 /* SubscriptionListTableViewCell.xib */,
+				BD8C2F4C2726404800AB9342 /* SubscriptionCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -264,6 +275,7 @@
 				BDFBB3272715661A00271907 /* UIButton+Extension.swift */,
 				BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */,
 				BD1182F72725AF60002B0BFF /* UITableView+Extension.swift */,
+				BD8C2F4E272640F000AB9342 /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +406,7 @@
 			files = (
 				BDF3E87527204B57000BFA1C /* SF-Pro-Display-Semibold.otf in Resources */,
 				BDBD59292709E6BD00AC85BF /* LaunchScreen.storyboard in Resources */,
+				BD8C2F4B2726403400AB9342 /* SubscriptionListTableViewCell.xib in Resources */,
 				BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */,
 				BDF3E87327204B57000BFA1C /* SF-Pro-Display-Regular.otf in Resources */,
 				BDFBB36B2715EB0D00271907 /* GoogleService-Info.plist in Resources */,
@@ -455,6 +468,7 @@
 				BDBD59412709E9A400AC85BF /* UIView+Extension.swift in Sources */,
 				BD683640271DC82A00C24BB6 /* BaseTabBarController.swift in Sources */,
 				BD722C8D271079AB00B9CC56 /* String+Extension.swift in Sources */,
+				BD8C2F4D2726404800AB9342 /* SubscriptionCollectionViewCell.swift in Sources */,
 				BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */,
 				BDE4BBDC2725AC2C00E02B38 /* Reusable+NibLoadable.swift in Sources */,
 				BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */,
@@ -465,6 +479,8 @@
 				BD68364A271DC85700C24BB6 /* LibraryViewController.swift in Sources */,
 				BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */,
 				BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */,
+				BD8C2F4A2726403400AB9342 /* SubscriptionListTableViewCell.swift in Sources */,
+				BD8C2F4F272640F000AB9342 /* UICollectionView+Extension.swift in Sources */,
 				BDFBB32F271573E700271907 /* TextFieldGenerator.swift in Sources */,
 				BDFBB3282715661A00271907 /* UIButton+Extension.swift in Sources */,
 				BD683646271DC84500C24BB6 /* PlusViewController.swift in Sources */,
