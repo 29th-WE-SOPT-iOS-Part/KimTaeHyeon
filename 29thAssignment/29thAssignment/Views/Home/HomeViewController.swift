@@ -29,6 +29,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupHierarchy()
         setupLayout()
         setupTableView()
@@ -55,6 +56,43 @@ class HomeViewController: UIViewController {
             $0.edges.equalToSuperview()
         }
     }
+    
+    // 네비게이션 바 세팅
+    // Left Item, Right Items
+    private func setupNavigationBar() {
+        let titleImageView = UIImageView().then {
+            $0.image = Const.Image.youtubePremiumLogo
+            $0.contentMode = .scaleAspectFill
+        }
+        
+        let shareImageView = UIImageView().then {
+            $0.image = Const.Image.windowSharingIcon
+            $0.contentMode = .scaleAspectFill
+        }
+        
+        let notificationeImageView = UIImageView().then {
+            $0.image = Const.Image.notificationIcon
+            $0.contentMode = .scaleAspectFill
+        }
+        
+        let searchImageView = UIImageView().then {
+            $0.image = Const.Image.searchIcon
+            $0.contentMode = .scaleAspectFill
+        }
+        
+        let profileImageView = UIImageView().then {
+            $0.image = Const.Image.wesoptProfile24
+            $0.contentMode = .scaleAspectFill
+        }
+        
+        let shareItem = UIBarButtonItem(customView: shareImageView)
+        let notificationItem = UIBarButtonItem(customView: notificationeImageView)
+        let searchItem = UIBarButtonItem(customView: searchImageView)
+        let profileItem = UIBarButtonItem(customView: profileImageView)
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: titleImageView)
+        self.navigationItem.rightBarButtonItems = [profileItem, searchItem, notificationItem, shareItem]
+    }
 }
 
 //MARK: UITableViewDataSource
@@ -72,7 +110,7 @@ extension HomeViewController: UITableViewDataSource {
         default:
             let feedCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedTableViewCell
             feedCell.configureImage(thumbnailImage: thumbnailImages[indexPath.row % 5],
-                                    profileImage: Const.Image.wesoptProfile)
+                                    profileImage: Const.Image.wesoptProfile36)
             return feedCell
         }
     }
