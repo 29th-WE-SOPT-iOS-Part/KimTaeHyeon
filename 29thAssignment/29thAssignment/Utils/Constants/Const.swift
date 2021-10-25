@@ -37,7 +37,8 @@ struct Const {
         static let subscriptionsIconFill = UIImage(named: "subscriptionsIconFill")
         
         // Image for Feeds
-        static let wesoptProfile = UIImage(named: "wesoptProfile")
+        static let wesoptProfile24 = UIImage(named: "wesoptProfile24")
+        static let wesoptProfile36 = UIImage(named: "wesoptProfile36")
         static let wesoptAndroidpart = UIImage(named: "wesoptAndroidpart")
         static let wesoptDesignPart = UIImage(named: "wesoptDesignPart")
         static let wesoptiOSPart = UIImage(named: "wesoptiOSPart")
