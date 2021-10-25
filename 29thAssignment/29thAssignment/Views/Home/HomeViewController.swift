@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupNavigationItems()
         setupHierarchy()
         setupLayout()
         setupTableView()
@@ -58,8 +59,14 @@ class HomeViewController: UIViewController {
     }
     
     // 네비게이션 바 세팅
-    // Left Item, Right Items
+
     private func setupNavigationBar() {
+        navigationController?.hidesBarsOnSwipe = true
+    }
+    
+    // 네비게이션 바 아이템 세팅
+    // Left Item, Right Items
+    private func setupNavigationItems() {
         let titleImageView = UIImageView().then {
             $0.image = Const.Image.youtubePremiumLogo
             $0.contentMode = .scaleAspectFill
