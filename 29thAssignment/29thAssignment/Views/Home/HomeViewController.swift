@@ -46,6 +46,7 @@ class HomeViewController: UIViewController {
     private func registerTableViewCell() {
         tableView.register(FeedTableViewCell.self)
         tableView.register(SubscriptionListTableViewCell.self)
+        tableView.register(CategoryListTableViewCell.self)
     }
     
     private func setupHierarchy() {
@@ -114,6 +115,9 @@ extension HomeViewController: UITableViewDataSource {
         case 0:
             let subscriptionCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SubscriptionListTableViewCell
             return subscriptionCell
+        case 1:
+            let categoryCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as CategoryListTableViewCell
+            return categoryCell
         default:
             let feedCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedTableViewCell
             feedCell.configureImage(thumbnailImage: thumbnailImages[indexPath.row % 5],
@@ -127,7 +131,9 @@ extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 104
+            return 105
+        case 1:
+            return 48
         default:
             return UITableView.automaticDimension
         }
