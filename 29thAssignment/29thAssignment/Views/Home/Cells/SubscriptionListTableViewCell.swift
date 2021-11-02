@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SubscriptionListTableViewCell: UITableViewCell, Reusable, NibLoadable {
+class SubscriptionListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     

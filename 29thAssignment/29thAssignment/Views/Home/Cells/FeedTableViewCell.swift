@@ -49,5 +49,3 @@ class FeedTableViewCell: UITableViewCell {
         }
     }
 }
-
-extension FeedTableViewCell: Reusable, NibLoadable {}

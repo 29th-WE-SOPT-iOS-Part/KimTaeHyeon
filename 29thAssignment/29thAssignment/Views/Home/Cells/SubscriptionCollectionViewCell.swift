@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SubscriptionCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
+class SubscriptionCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var subscriptionImageView: UIImageView!
     @IBOutlet weak var subscriptionTitleLabel: UILabel!

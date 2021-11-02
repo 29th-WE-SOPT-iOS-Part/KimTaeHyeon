@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryListTableViewCell: UITableViewCell, NibLoadable, Reusable {
+class CategoryListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
