@@ -1,5 +1,5 @@
 //
-//  SubscriptionListTableViewCell.swift
+//  ChannelListTableViewCell.swift
 //  29thAssignment
 //
 //  Created by taehy.k on 2021/10/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SubscriptionListTableViewCell: UITableViewCell {
+class ChannelListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -39,24 +39,24 @@ class SubscriptionListTableViewCell: UITableViewCell {
     }
     
     private func registerCollectionViewCell() {
-        collectionView.register(SubscriptionCollectionViewCell.self)
+        collectionView.register(ChannelCollectionViewCell.self)
     }
 }
 
-extension SubscriptionListTableViewCell: UICollectionViewDataSource {
+extension ChannelListTableViewCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as SubscriptionCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as ChannelCollectionViewCell
         cell.configure(subscriptionImage: subscriptionImages[indexPath.row % 8],
                        title: subscriptionTitles[indexPath.row % 6])
         return cell
     }
 }
 
-extension SubscriptionListTableViewCell: UICollectionViewDelegateFlowLayout {
+extension ChannelListTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 72, height: 104)
     }

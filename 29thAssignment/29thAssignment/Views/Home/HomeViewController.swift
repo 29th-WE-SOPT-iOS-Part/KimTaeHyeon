@@ -45,7 +45,7 @@ class HomeViewController: UIViewController {
     
     private func registerTableViewCell() {
         tableView.register(FeedTableViewCell.self)
-        tableView.register(SubscriptionListTableViewCell.self)
+        tableView.register(ChannelListTableViewCell.self)
         tableView.register(CategoryListTableViewCell.self)
     }
     
@@ -113,7 +113,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let subscriptionCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as SubscriptionListTableViewCell
+            let subscriptionCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as ChannelListTableViewCell
             return subscriptionCell
         case 1:
             let categoryCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as CategoryListTableViewCell
