@@ -10,6 +10,14 @@ import UIKit
 import SnapKit
 import Then
 
+// MARK: - HomeVC에서 사용될 셀 타입
+
+private enum CellType {
+    case channel
+    case category
+    case feed
+}
+
 class HomeViewController: UIViewController {
     
     // MARK: - UI properties
@@ -24,6 +32,8 @@ class HomeViewController: UIViewController {
         Const.Image.wesoptDesignPart,
         Const.Image.wesoptServerPart,
     ]
+    
+    fileprivate let layout: [CellType] = [.channel, .category, .feed]
 
     // MARK: - Life cycles
     
@@ -111,14 +121,16 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row {
-        case 0:
-            let subscriptionCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as ChannelListTableViewCell
-            return subscriptionCell
-        case 1:
+        let row = indexPath.row > 2 ? 2 : indexPath.row
+        
+        switch layout[row] {
+        case .channel:
+            let channelCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as ChannelListTableViewCell
+            return channelCell
+        case .category:
             let categoryCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as CategoryListTableViewCell
             return categoryCell
-        default:
+        case .feed:
             let feedCell = tableView.dequeueReusableCell(forIndexPath: indexPath) as FeedTableViewCell
             feedCell.configureImage(thumbnailImage: thumbnailImages[indexPath.row % 5],
                                     profileImage: Const.Image.wesoptProfile36)
@@ -129,12 +141,14 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
+        let row = indexPath.row > 2 ? 2 : indexPath.row
+        
+        switch layout[row] {
+        case .channel:
             return 105
-        case 1:
+        case .category:
             return 48
-        default:
+        case .feed:
             return UITableView.automaticDimension
         }
     }
