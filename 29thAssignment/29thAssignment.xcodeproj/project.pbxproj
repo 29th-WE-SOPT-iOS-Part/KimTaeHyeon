@@ -135,8 +135,8 @@
 		BD68363A271DC78A00C24BB6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BD8FB1192725B30900B03D6E /* Cells */,
 				BD683641271DC83800C24BB6 /* HomeViewController.swift */,
+				BD8FB1192725B30900B03D6E /* Cells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
