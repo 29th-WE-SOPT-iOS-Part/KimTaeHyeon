@@ -12,6 +12,7 @@
 		BD5658DF2733F7BB00EE57DD /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5658DD2733F7BB00EE57DD /* FeedCollectionViewCell.swift */; };
 		BD5658E02733F7BB00EE57DD /* FeedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5658DE2733F7BB00EE57DD /* FeedCollectionViewCell.xib */; };
 		BD5658E22733FE9F00EE57DD /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5658E12733FE9F00EE57DD /* Channel.swift */; };
+		BD5658E42733FEE900EE57DD /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5658E32733FEE900EE57DD /* Feed.swift */; };
 		BD60EE76271C818A0051AF67 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */; };
 		BD683640271DC82A00C24BB6 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68363F271DC82A00C24BB6 /* BaseTabBarController.swift */; };
 		BD683642271DC83800C24BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD683641271DC83800C24BB6 /* HomeViewController.swift */; };
@@ -31,7 +32,6 @@
 		BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */; };
 		BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBD59252709E6BD00AC85BF /* Assets.xcassets */; };
 		BDBD59292709E6BD00AC85BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDBD59272709E6BD00AC85BF /* LaunchScreen.storyboard */; };
-		BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD593A2709E8A300AC85BF /* TempModel.swift */; };
 		BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD593C2709E8B000AC85BF /* TempService.swift */; };
 		BDBD59412709E9A400AC85BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59402709E9A400AC85BF /* UIView+Extension.swift */; };
 		BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */; };
@@ -61,6 +61,7 @@
 		BD5658DD2733F7BB00EE57DD /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		BD5658DE2733F7BB00EE57DD /* FeedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCollectionViewCell.xib; sourceTree = "<group>"; };
 		BD5658E12733FE9F00EE57DD /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		BD5658E32733FEE900EE57DD /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		BD68363F271DC82A00C24BB6 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		BD683641271DC83800C24BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +83,6 @@
 		BDBD59252709E6BD00AC85BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDBD59282709E6BD00AC85BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDBD592A2709E6BD00AC85BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDBD593A2709E8A300AC85BF /* TempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempModel.swift; sourceTree = "<group>"; };
 		BDBD593C2709E8B000AC85BF /* TempService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempService.swift; sourceTree = "<group>"; };
 		BDBD59402709E9A400AC85BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignUpViewController.swift; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				BD5658E12733FE9F00EE57DD /* Channel.swift */,
-				BDBD593A2709E8A300AC85BF /* TempModel.swift */,
+				BD5658E32733FEE900EE57DD /* Feed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -478,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD722C9127107C0F00B9CC56 /* CommonTextField.swift in Sources */,
+				BD5658E42733FEE900EE57DD /* Feed.swift in Sources */,
 				BDBD59412709E9A400AC85BF /* UIView+Extension.swift in Sources */,
 				BD683640271DC82A00C24BB6 /* BaseTabBarController.swift in Sources */,
 				BD722C8D271079AB00B9CC56 /* String+Extension.swift in Sources */,
@@ -491,7 +492,6 @@
 				BDFBB32A2715731000271907 /* PaddingLabel.swift in Sources */,
 				BD5658DF2733F7BB00EE57DD /* FeedCollectionViewCell.swift in Sources */,
 				BD68364A271DC85700C24BB6 /* LibraryViewController.swift in Sources */,
-				BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */,
 				BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */,
 				BD8C2F4F272640F000AB9342 /* UICollectionView+Extension.swift in Sources */,
 				BDFBB32F271573E700271907 /* TextFieldGenerator.swift in Sources */,

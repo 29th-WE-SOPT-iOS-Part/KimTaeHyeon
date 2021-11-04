@@ -26,21 +26,21 @@ class FeedCollectionViewCell: UICollectionViewCell {
     }
     
     // 데이터 설정 함수
-    public func configure(thumbnailImageUrl: String,
-                          profileImageUrl: String,
+    public func configure(thumbnailImage: UIImage?,
+                          profileImage: UIImage?,
                           feedTitle: String,
                           feedSubInformation: String) {
         
-        if let thumbnailImage = UIImage(named: thumbnailImageUrl),
-           let profileImage = UIImage(named: profileImageUrl) {
+        if let thumbnailImage = thumbnailImage,
+           let profileImage = profileImage {
             thumbnailImageView.image = thumbnailImage
             profileImageView.image = profileImage
+            feedTitleLabel.text = feedTitle
+            feedSubInformationLabel.text = feedSubInformation
         }
-        feedTitleLabel.text = feedTitle
-        feedSubInformationLabel.text = feedSubInformation
     }
-    
-    // 이미지 설정 함수 (이미지만 테스트하려고 만든 함수)
+        
+        // 이미지 설정 함수 (이미지만 테스트하려고 만든 함수)
     public func configureImage(thumbnailImage: UIImage?,
                                profileImage: UIImage?) {
         if let thumbnailImage = thumbnailImage,
