@@ -17,6 +17,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         setupDefault()
     }
     
+    override func prepareForReuse() {
+
+    }
+    
     private func setupDefault() {
         categoryBackgroundView.layer.cornerRadius = 16
         categoryBackgroundView.layer.borderColor = UIColor.systemGray4.cgColor
