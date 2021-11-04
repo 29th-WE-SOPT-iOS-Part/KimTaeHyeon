@@ -1,5 +1,5 @@
 //
-//  SubscriptionCollectionViewCell.swift
+//  ChannelCollectionViewCell.swift
 //  29thAssignment
 //
 //  Created by taehy.k on 2021/10/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SubscriptionCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
+class ChannelCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var subscriptionImageView: UIImageView!
     @IBOutlet weak var subscriptionTitleLabel: UILabel!

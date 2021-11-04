@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		8D59A313F9A7C789E5DEF8EE /* Pods_29thAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47F853999E454A923520C670 /* Pods_29thAssignment.framework */; };
 		BD1182F82725AF60002B0BFF /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1182F72725AF60002B0BFF /* UITableView+Extension.swift */; };
+		BD5658DF2733F7BB00EE57DD /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5658DD2733F7BB00EE57DD /* FeedCollectionViewCell.swift */; };
+		BD5658E02733F7BB00EE57DD /* FeedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD5658DE2733F7BB00EE57DD /* FeedCollectionViewCell.xib */; };
+		BD5658E22733FE9F00EE57DD /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5658E12733FE9F00EE57DD /* Channel.swift */; };
+		BD5658E42733FEE900EE57DD /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5658E32733FEE900EE57DD /* Feed.swift */; };
 		BD60EE76271C818A0051AF67 /* UIScreen+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */; };
 		BD683640271DC82A00C24BB6 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68363F271DC82A00C24BB6 /* BaseTabBarController.swift */; };
 		BD683642271DC83800C24BB6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD683641271DC83800C24BB6 /* HomeViewController.swift */; };
@@ -21,24 +25,23 @@
 		BD722C9127107C0F00B9CC56 /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C9027107C0F00B9CC56 /* CommonTextField.swift */; };
 		BD722C932710819200B9CC56 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C922710819200B9CC56 /* UITextField+Extension.swift */; };
 		BD747CD527114979007B5274 /* CommonAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD747CD427114979007B5274 /* CommonAuthView.swift */; };
-		BD8C2F4A2726403400AB9342 /* SubscriptionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C2F482726403400AB9342 /* SubscriptionListTableViewCell.swift */; };
-		BD8C2F4B2726403400AB9342 /* SubscriptionListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8C2F492726403400AB9342 /* SubscriptionListTableViewCell.xib */; };
 		BD8C2F4F272640F000AB9342 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C2F4E272640F000AB9342 /* UICollectionView+Extension.swift */; };
-		BD8C2F522726422F00AB9342 /* SubscriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C2F502726422F00AB9342 /* SubscriptionCollectionViewCell.swift */; };
-		BD8C2F532726422F00AB9342 /* SubscriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8C2F512726422F00AB9342 /* SubscriptionCollectionViewCell.xib */; };
-		BD8FB11C2725B32300B03D6E /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8FB11A2725B32300B03D6E /* FeedTableViewCell.swift */; };
-		BD8FB11D2725B32300B03D6E /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8FB11B2725B32300B03D6E /* FeedTableViewCell.xib */; };
+		BD8C2F522726422F00AB9342 /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8C2F502726422F00AB9342 /* ChannelCollectionViewCell.swift */; };
+		BD8C2F532726422F00AB9342 /* ChannelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD8C2F512726422F00AB9342 /* ChannelCollectionViewCell.xib */; };
 		BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */; };
 		BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */; };
 		BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBD59252709E6BD00AC85BF /* Assets.xcassets */; };
 		BDBD59292709E6BD00AC85BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDBD59272709E6BD00AC85BF /* LaunchScreen.storyboard */; };
-		BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD593A2709E8A300AC85BF /* TempModel.swift */; };
 		BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD593C2709E8B000AC85BF /* TempService.swift */; };
 		BDBD59412709E9A400AC85BF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59402709E9A400AC85BF /* UIView+Extension.swift */; };
 		BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */; };
 		BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */; };
 		BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */; };
 		BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */; };
+		BDCB59222730EDBF00EEDDF9 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB59212730EDBF00EEDDF9 /* CategoryCollectionViewCell.swift */; };
+		BDCB59242730EDC500EEDDF9 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDCB59232730EDC500EEDDF9 /* CategoryCollectionViewCell.xib */; };
+		BDCB592A2730EEAF00EEDDF9 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB59292730EEAF00EEDDF9 /* UITableViewCell+Extension.swift */; };
+		BDCB592C2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB592B2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift */; };
 		BDE4BBDC2725AC2C00E02B38 /* Reusable+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4BBDB2725AC2C00E02B38 /* Reusable+NibLoadable.swift */; };
 		BDF3E86E27204AB9000BFA1C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF3E86D27204AB9000BFA1C /* Font.swift */; };
 		BDF3E87327204B57000BFA1C /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDF3E87027204B56000BFA1C /* SF-Pro-Display-Regular.otf */; };
@@ -55,6 +58,10 @@
 		47F853999E454A923520C670 /* Pods_29thAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_29thAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		70BA03D0CB54617A523F6A31 /* Pods-29thAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-29thAssignment.debug.xcconfig"; path = "Target Support Files/Pods-29thAssignment/Pods-29thAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		BD1182F72725AF60002B0BFF /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		BD5658DD2733F7BB00EE57DD /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD5658DE2733F7BB00EE57DD /* FeedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCollectionViewCell.xib; sourceTree = "<group>"; };
+		BD5658E12733FE9F00EE57DD /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		BD5658E32733FEE900EE57DD /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+Extension.swift"; sourceTree = "<group>"; };
 		BD68363F271DC82A00C24BB6 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		BD683641271DC83800C24BB6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -67,26 +74,25 @@
 		BD722C9027107C0F00B9CC56 /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
 		BD722C922710819200B9CC56 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		BD747CD427114979007B5274 /* CommonAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonAuthView.swift; sourceTree = "<group>"; };
-		BD8C2F482726403400AB9342 /* SubscriptionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionListTableViewCell.swift; sourceTree = "<group>"; };
-		BD8C2F492726403400AB9342 /* SubscriptionListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionListTableViewCell.xib; sourceTree = "<group>"; };
 		BD8C2F4E272640F000AB9342 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
-		BD8C2F502726422F00AB9342 /* SubscriptionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollectionViewCell.swift; sourceTree = "<group>"; };
-		BD8C2F512726422F00AB9342 /* SubscriptionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubscriptionCollectionViewCell.xib; sourceTree = "<group>"; };
-		BD8FB11A2725B32300B03D6E /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
-		BD8FB11B2725B32300B03D6E /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
+		BD8C2F502726422F00AB9342 /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		BD8C2F512726422F00AB9342 /* ChannelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelCollectionViewCell.xib; sourceTree = "<group>"; };
 		BDBD59192709E6BC00AC85BF /* 29thAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 29thAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BDBD59252709E6BD00AC85BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDBD59282709E6BD00AC85BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDBD592A2709E6BD00AC85BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BDBD593A2709E8A300AC85BF /* TempModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempModel.swift; sourceTree = "<group>"; };
 		BDBD593C2709E8B000AC85BF /* TempService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempService.swift; sourceTree = "<group>"; };
 		BDBD59402709E9A400AC85BF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignUpViewController.swift; sourceTree = "<group>"; };
 		BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleConfirmViewController.swift; sourceTree = "<group>"; };
 		BDBD5954270AB68A00AC85BF /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		BDCB59212730EDBF00EEDDF9 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		BDCB59232730EDC500EEDDF9 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		BDCB59292730EEAF00EEDDF9 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		BDCB592B2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		BDE4BBDB2725AC2C00E02B38 /* Reusable+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable+NibLoadable.swift"; sourceTree = "<group>"; };
 		BDF3E86D27204AB9000BFA1C /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		BDF3E87027204B56000BFA1C /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
@@ -123,8 +129,8 @@
 		BD68363A271DC78A00C24BB6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BD8FB1192725B30900B03D6E /* Cells */,
 				BD683641271DC83800C24BB6 /* HomeViewController.swift */,
+				BD8FB1192725B30900B03D6E /* Cells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -172,12 +178,12 @@
 		BD8FB1192725B30900B03D6E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				BD8FB11A2725B32300B03D6E /* FeedTableViewCell.swift */,
-				BD8FB11B2725B32300B03D6E /* FeedTableViewCell.xib */,
-				BD8C2F482726403400AB9342 /* SubscriptionListTableViewCell.swift */,
-				BD8C2F492726403400AB9342 /* SubscriptionListTableViewCell.xib */,
-				BD8C2F502726422F00AB9342 /* SubscriptionCollectionViewCell.swift */,
-				BD8C2F512726422F00AB9342 /* SubscriptionCollectionViewCell.xib */,
+				BD8C2F502726422F00AB9342 /* ChannelCollectionViewCell.swift */,
+				BD8C2F512726422F00AB9342 /* ChannelCollectionViewCell.xib */,
+				BDCB59212730EDBF00EEDDF9 /* CategoryCollectionViewCell.swift */,
+				BDCB59232730EDC500EEDDF9 /* CategoryCollectionViewCell.xib */,
+				BD5658DD2733F7BB00EE57DD /* FeedCollectionViewCell.swift */,
+				BD5658DE2733F7BB00EE57DD /* FeedCollectionViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -232,7 +238,8 @@
 		BDBD59312709E79000AC85BF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BDBD593A2709E8A300AC85BF /* TempModel.swift */,
+				BD5658E12733FE9F00EE57DD /* Channel.swift */,
+				BD5658E32733FEE900EE57DD /* Feed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -279,6 +286,8 @@
 				BD60EE75271C818A0051AF67 /* UIScreen+Extension.swift */,
 				BD1182F72725AF60002B0BFF /* UITableView+Extension.swift */,
 				BD8C2F4E272640F000AB9342 /* UICollectionView+Extension.swift */,
+				BDCB59292730EEAF00EEDDF9 /* UITableViewCell+Extension.swift */,
+				BDCB592B2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -409,13 +418,13 @@
 			files = (
 				BDF3E87527204B57000BFA1C /* SF-Pro-Display-Semibold.otf in Resources */,
 				BDBD59292709E6BD00AC85BF /* LaunchScreen.storyboard in Resources */,
-				BD8C2F4B2726403400AB9342 /* SubscriptionListTableViewCell.xib in Resources */,
 				BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */,
-				BD8C2F532726422F00AB9342 /* SubscriptionCollectionViewCell.xib in Resources */,
+				BD8C2F532726422F00AB9342 /* ChannelCollectionViewCell.xib in Resources */,
 				BDF3E87327204B57000BFA1C /* SF-Pro-Display-Regular.otf in Resources */,
+				BDCB59242730EDC500EEDDF9 /* CategoryCollectionViewCell.xib in Resources */,
 				BDFBB36B2715EB0D00271907 /* GoogleService-Info.plist in Resources */,
 				BDF3E87427204B57000BFA1C /* SF-Pro-Display-Medium.otf in Resources */,
-				BD8FB11D2725B32300B03D6E /* FeedTableViewCell.xib in Resources */,
+				BD5658E02733F7BB00EE57DD /* FeedCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +478,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD722C9127107C0F00B9CC56 /* CommonTextField.swift in Sources */,
+				BD5658E42733FEE900EE57DD /* Feed.swift in Sources */,
 				BDBD59412709E9A400AC85BF /* UIView+Extension.swift in Sources */,
 				BD683640271DC82A00C24BB6 /* BaseTabBarController.swift in Sources */,
 				BD722C8D271079AB00B9CC56 /* String+Extension.swift in Sources */,
@@ -476,18 +486,21 @@
 				BDE4BBDC2725AC2C00E02B38 /* Reusable+NibLoadable.swift in Sources */,
 				BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */,
 				BD683644271DC83E00C24BB6 /* ShortsViewController.swift in Sources */,
+				BDCB592C2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift in Sources */,
 				BD60EE76271C818A0051AF67 /* UIScreen+Extension.swift in Sources */,
 				BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */,
 				BDFBB32A2715731000271907 /* PaddingLabel.swift in Sources */,
+				BD5658DF2733F7BB00EE57DD /* FeedCollectionViewCell.swift in Sources */,
 				BD68364A271DC85700C24BB6 /* LibraryViewController.swift in Sources */,
-				BDBD593B2709E8A300AC85BF /* TempModel.swift in Sources */,
 				BDBD593D2709E8B000AC85BF /* TempService.swift in Sources */,
-				BD8C2F4A2726403400AB9342 /* SubscriptionListTableViewCell.swift in Sources */,
 				BD8C2F4F272640F000AB9342 /* UICollectionView+Extension.swift in Sources */,
 				BDFBB32F271573E700271907 /* TextFieldGenerator.swift in Sources */,
 				BDFBB3282715661A00271907 /* UIButton+Extension.swift in Sources */,
 				BD683646271DC84500C24BB6 /* PlusViewController.swift in Sources */,
+				BDCB59222730EDBF00EEDDF9 /* CategoryCollectionViewCell.swift in Sources */,
+				BD5658E22733FE9F00EE57DD /* Channel.swift in Sources */,
 				BD722C932710819200B9CC56 /* UITextField+Extension.swift in Sources */,
+				BDCB592A2730EEAF00EEDDF9 /* UITableViewCell+Extension.swift in Sources */,
 				BDFBB32C271573BC00271907 /* BaeminStyleTextField.swift in Sources */,
 				BD683642271DC83800C24BB6 /* HomeViewController.swift in Sources */,
 				BD68364D271DC88700C24BB6 /* Const.swift in Sources */,
@@ -495,9 +508,8 @@
 				BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */,
 				BD1182F82725AF60002B0BFF /* UITableView+Extension.swift in Sources */,
 				BD683648271DC84F00C24BB6 /* SubscriptionViewController.swift in Sources */,
-				BD8C2F522726422F00AB9342 /* SubscriptionCollectionViewCell.swift in Sources */,
+				BD8C2F522726422F00AB9342 /* ChannelCollectionViewCell.swift in Sources */,
 				BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */,
-				BD8FB11C2725B32300B03D6E /* FeedTableViewCell.swift in Sources */,
 				BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */,
 				BD747CD527114979007B5274 /* CommonAuthView.swift in Sources */,
 			);

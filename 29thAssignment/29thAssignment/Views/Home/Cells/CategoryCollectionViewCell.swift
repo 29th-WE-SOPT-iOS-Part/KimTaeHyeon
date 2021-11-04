@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CategoryCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
+class CategoryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var categoryBackgroundView: UIView!
     @IBOutlet weak var categoryTitleLabel: UILabel!
@@ -15,6 +15,10 @@ class CategoryCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupDefault()
+    }
+    
+    override func prepareForReuse() {
+
     }
     
     private func setupDefault() {
