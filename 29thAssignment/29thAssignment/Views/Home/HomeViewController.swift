@@ -84,6 +84,9 @@ class HomeViewController: UIViewController {
         collectionView.register(ChannelCollectionViewCell.self)
         collectionView.register(CategoryCollectionViewCell.self)
         collectionView.register(FeedCollectionViewCell.self)
+        collectionView.register(SeparatorCollectionReusableView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+                                withReuseIdentifier: SeparatorCollectionReusableView.reuseIdentifier)
     }
 }
 
@@ -102,6 +105,15 @@ extension HomeViewController {
         }
     }
     
+    fileprivate func supplementaryFooterSeparatorItem() -> NSCollectionLayoutBoundarySupplementaryItem {
+        NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1.0),
+                heightDimension: .absolute(1)),
+            elementKind: UICollectionView.elementKindSectionFooter,
+            alignment: .bottom)
+    }
+    
     private func createChannelSection() -> NSCollectionLayoutSection {
         let item = NSCollectionLayoutItem(
             layoutSize: .init(
@@ -117,6 +129,8 @@ extension HomeViewController {
         )
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
+        section.supplementariesFollowContentInsets = false
+        section.boundarySupplementaryItems = [supplementaryFooterSeparatorItem()]
         return section
     }
     
@@ -135,7 +149,7 @@ extension HomeViewController {
         )
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 9
-        section.contentInsets = .init(top: 0, leading: 13, bottom: 0, trailing: 13)
+        section.contentInsets = .init(top: 9, leading: 13, bottom: -9, trailing: 13)
         section.orthogonalScrollingBehavior = .continuous
         return section
     }
@@ -185,5 +199,15 @@ extension HomeViewController: UICollectionViewDataSource {
                            feedSubInformation: feed.feedSubtitle)
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter,
+                                                                           withReuseIdentifier: SeparatorCollectionReusableView.reuseIdentifier,
+                                                                           for: indexPath) as? SeparatorCollectionReusableView
+        else {
+            return UICollectionReusableView()
+        }
+        return footer
     }
 }
