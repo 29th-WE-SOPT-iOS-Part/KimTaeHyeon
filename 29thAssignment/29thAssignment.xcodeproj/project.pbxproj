@@ -22,6 +22,7 @@
 		BD68364A271DC85700C24BB6 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD683649271DC85700C24BB6 /* LibraryViewController.swift */; };
 		BD68364D271DC88700C24BB6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD68364C271DC88700C24BB6 /* Const.swift */; };
 		BD6BA8D92736CFFE0054F6F0 /* SeparatorCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6BA8D82736CFFE0054F6F0 /* SeparatorCollectionReusableView.swift */; };
+		BD6BA8DB2736D5B70054F6F0 /* SectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6BA8DA2736D5B70054F6F0 /* SectionLayout.swift */; };
 		BD722C8D271079AB00B9CC56 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C8C271079AB00B9CC56 /* String+Extension.swift */; };
 		BD722C9127107C0F00B9CC56 /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C9027107C0F00B9CC56 /* CommonTextField.swift */; };
 		BD722C932710819200B9CC56 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD722C922710819200B9CC56 /* UITextField+Extension.swift */; };
@@ -73,6 +74,7 @@
 		BD683649271DC85700C24BB6 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		BD68364C271DC88700C24BB6 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		BD6BA8D82736CFFE0054F6F0 /* SeparatorCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeparatorCollectionReusableView.swift; sourceTree = "<group>"; };
+		BD6BA8DA2736D5B70054F6F0 /* SectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionLayout.swift; sourceTree = "<group>"; };
 		BD722C8C271079AB00B9CC56 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		BD722C9027107C0F00B9CC56 /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
 		BD722C922710819200B9CC56 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				BD683641271DC83800C24BB6 /* HomeViewController.swift */,
+				BD6BA8DA2736D5B70054F6F0 /* SectionLayout.swift */,
 				BD8FB1192725B30900B03D6E /* Cells */,
 			);
 			path = Home;
@@ -516,6 +519,7 @@
 				BDBD594A2709EE2800AC85BF /* GoogleSignInViewController.swift in Sources */,
 				BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */,
 				BD747CD527114979007B5274 /* CommonAuthView.swift in Sources */,
+				BD6BA8DB2736D5B70054F6F0 /* SectionLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
