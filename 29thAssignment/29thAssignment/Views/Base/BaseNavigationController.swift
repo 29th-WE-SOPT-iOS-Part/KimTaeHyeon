@@ -72,7 +72,13 @@ class BaseNavigationController: UINavigationController {
         case .share:        print("share button tap")
         case .noti:         print("noti button tap")
         case .search:       print("search button tap")
-        case .profile:      print("profile button tap")
+        case .profile:      transitionToSignInViewController()
         }
+    }
+    
+    private func transitionToSignInViewController() {
+        let signInViewController = GoogleSignInViewController()
+        signInViewController.modalPresentationStyle = .fullScreen
+        present(signInViewController, animated: true, completion: nil)
     }
 }

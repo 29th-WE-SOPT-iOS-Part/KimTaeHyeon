@@ -74,13 +74,11 @@ class GoogleSignInViewController: UIViewController {
         let confirmVC = GoogleConfirmViewController()
         confirmVC.name = self.signInView.name()
         confirmVC.modalPresentationStyle = .fullScreen
-//        self.present(confirmVC, animated: true, completion: nil)
         show(confirmVC, sender: self)
     }
     
     private func goToSignUpVC() {
         let signUpVC = GoogleSignUpViewController()
-//        self.navigationController?.pushViewController(signUpVC, animated: true)
         show(signUpVC, sender: self)
     }
 }
