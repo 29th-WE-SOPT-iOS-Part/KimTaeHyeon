@@ -48,11 +48,11 @@ class BaseTabBarController: UITabBarController {
     }
     
     private func setupTabBarItems() {
-        let homeNavVC = UINavigationController(rootViewController: HomeViewController())
+        let homeNavVC = BaseNavigationController(rootViewController: HomeViewController())
         let shortsNavVC = UINavigationController(rootViewController: ShortsViewController())
         let plusNavVC = UINavigationController(rootViewController: PlusViewController())
-        let subscriptionNavVC = UINavigationController(rootViewController: SubscriptionViewController())
-        let libraryNavVC = UINavigationController(rootViewController: LibraryViewController())
+        let subscriptionNavVC = BaseNavigationController(rootViewController: SubscriptionViewController())
+        let libraryNavVC = BaseNavigationController(rootViewController: LibraryViewController())
         
         let navViewControllers = [homeNavVC, shortsNavVC, plusNavVC, subscriptionNavVC, libraryNavVC]
 

@@ -45,6 +45,7 @@
 		BDCB592A2730EEAF00EEDDF9 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB59292730EEAF00EEDDF9 /* UITableViewCell+Extension.swift */; };
 		BDCB592C2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCB592B2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift */; };
 		BDE4BBDC2725AC2C00E02B38 /* Reusable+NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4BBDB2725AC2C00E02B38 /* Reusable+NibLoadable.swift */; };
+		BDF32DE5273A9B27007046B5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF32DE4273A9B27007046B5 /* BaseNavigationController.swift */; };
 		BDF3E86E27204AB9000BFA1C /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF3E86D27204AB9000BFA1C /* Font.swift */; };
 		BDF3E87327204B57000BFA1C /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDF3E87027204B56000BFA1C /* SF-Pro-Display-Regular.otf */; };
 		BDF3E87427204B57000BFA1C /* SF-Pro-Display-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = BDF3E87127204B56000BFA1C /* SF-Pro-Display-Medium.otf */; };
@@ -99,6 +100,7 @@
 		BDCB59292730EEAF00EEDDF9 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
 		BDCB592B2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
 		BDE4BBDB2725AC2C00E02B38 /* Reusable+NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reusable+NibLoadable.swift"; sourceTree = "<group>"; };
+		BDF32DE4273A9B27007046B5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		BDF3E86D27204AB9000BFA1C /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		BDF3E87027204B56000BFA1C /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		BDF3E87127204B56000BFA1C /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
@@ -125,9 +127,9 @@
 		BD68363A271DC78A00C24BB6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BD8FB1192725B30900B03D6E /* Cells */,
 				BD683641271DC83800C24BB6 /* HomeViewController.swift */,
 				BD6BA8DA2736D5B70054F6F0 /* SectionLayout.swift */,
-				BD8FB1192725B30900B03D6E /* Cells */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -221,7 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				BDBD59272709E6BD00AC85BF /* LaunchScreen.storyboard */,
-				BD68363F271DC82A00C24BB6 /* BaseTabBarController.swift */,
+				BDF32DE3273A9B0C007046B5 /* Base */,
 				BDBD594D270A0D8600AC85BF /* Common */,
 				BDBD59422709EDDE00AC85BF /* Google */,
 				BD68363A271DC78A00C24BB6 /* Home */,
@@ -317,6 +319,15 @@
 				BDFBB32B271573BC00271907 /* BaeminStyleTextField.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BDF32DE3273A9B0C007046B5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BD68363F271DC82A00C24BB6 /* BaseTabBarController.swift */,
+				BDF32DE4273A9B27007046B5 /* BaseNavigationController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		BDF3E86A27204AA7000BFA1C /* Enums */ = {
@@ -489,6 +500,7 @@
 				BD683640271DC82A00C24BB6 /* BaseTabBarController.swift in Sources */,
 				BD722C8D271079AB00B9CC56 /* String+Extension.swift in Sources */,
 				BDBD59482709EE1F00AC85BF /* GoogleSignUpViewController.swift in Sources */,
+				BDF32DE5273A9B27007046B5 /* BaseNavigationController.swift in Sources */,
 				BDE4BBDC2725AC2C00E02B38 /* Reusable+NibLoadable.swift in Sources */,
 				BDBD594C2709EE3300AC85BF /* GoogleConfirmViewController.swift in Sources */,
 				BD683644271DC83E00C24BB6 /* ShortsViewController.swift in Sources */,

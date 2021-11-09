@@ -29,7 +29,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        setupNavigationItems()
         setupHierarchy()
         setupLayout()
         setupCollectionView()
@@ -37,34 +36,9 @@ class HomeViewController: UIViewController {
     }
     
     // 네비게이션 바 세팅
-
     private func setupNavigationBar() {
         navigationController?.hidesBarsOnSwipe = true
     }
-    
-    // 네비게이션 바 아이템 세팅
-    // Left Item, Right Items
-    private func setupNavigationItems() {
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: UIImageView(image: Const.Image.youtubePremiumLogo))
-        self.navigationItem.rightBarButtonItems = getCustomBarButtonItems()
-    }
-    
-    private func getCustomBarButtonItems() -> [UIBarButtonItem] {
-        let shareItem = getCustomBarButtonItem(iconImage: Const.Image.windowSharingIcon)
-        let notificationItem = getCustomBarButtonItem(iconImage: Const.Image.notificationIcon)
-        let searchItem = getCustomBarButtonItem(iconImage: Const.Image.searchIcon)
-        let profileItem = getCustomBarButtonItem(iconImage: Const.Image.wesoptProfile24)
-        return [profileItem, searchItem, notificationItem, shareItem]
-    }
-    
-    private func getCustomBarButtonItem(iconImage: UIImage?) -> UIBarButtonItem {
-        let button = UIButton(type: .custom)
-        button.setImage(iconImage, for: .normal)
-        button.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-        let barButtonItem = UIBarButtonItem(customView: button)
-        return barButtonItem
-    }
-    
     
     // 레이아웃 세팅
     private func setupHierarchy() {
