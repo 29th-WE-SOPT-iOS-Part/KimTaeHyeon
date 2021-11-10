@@ -60,21 +60,29 @@ class GoogleSignInViewController: UIViewController {
         APIClient.request(CommonResponse<AuthResponse>.self,
                           router: .signIn(signInRequest: userInfo)) { [weak self] models in
             guard let self = self else { return }
-            self.judgeSignIn(success: models.success, message: models.message)
+            self.judgeSignIn(success: models.success, message: models.message, username: models.data?.name)
         } failure: { error in
             print(error)
         }
     }
     
     // ✨ 로그인 성공 여부 판단
-    private func judgeSignIn(success: Bool, message: String) {
+    private func judgeSignIn(success: Bool, message: String, username: String?) {
         if success {
+            storeUsername(username: username)
             alertWithOkAction(title: "로그인", message: message) { [weak self] _ in
                 guard let self = self else { return }
                 self.goToConfirmVC()
             }
         } else {
             alertWithOkAction(title: "로그인", message: message, alertCompletion: nil)
+        }
+    }
+    
+    // ⭐️ 도전과제 UserDefaults
+    private func storeUsername(username: String?) {
+        if let username = username {
+            UserDefaults.standard.set(username, forKey: Key.username)
         }
     }
     
@@ -96,7 +104,6 @@ class GoogleSignInViewController: UIViewController {
     
     private func goToConfirmVC() {
         let confirmVC = GoogleConfirmViewController()
-        confirmVC.name = self.signInView.name()
         confirmVC.modalPresentationStyle = .fullScreen
         show(confirmVC, sender: self)
     }

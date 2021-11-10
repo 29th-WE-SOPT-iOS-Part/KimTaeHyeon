@@ -56,6 +56,8 @@ class GoogleConfirmViewController: UIViewController {
     // MARK: - Setup Functions
     private func setupAttribute() {
         view.backgroundColor = .systemBackground
+        // ⭐️ 도전과제 UserDefaults
+        messageLabel.text = UserDefaults.standard.string(forKey: Key.username)
     }
     
     private func setupLayout() {
