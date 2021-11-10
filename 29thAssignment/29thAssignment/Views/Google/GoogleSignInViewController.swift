@@ -59,11 +59,22 @@ class GoogleSignInViewController: UIViewController {
         guard let userInfo = signInView.userInfo() else { return }
         APIClient.request(CommonResponse<AuthResponse>.self,
                           router: .signIn(signInRequest: userInfo)) { [weak self] models in
-            print(models)
+            guard let self = self else { return }
+            self.judgeSignIn(success: models.success, message: models.message)
         } failure: { error in
             print(error)
         }
-
+    }
+    
+    // ✨ 로그인 성공 여부 판단
+    private func judgeSignIn(success: Bool, message: String) {
+        if success {
+            alertWithOkAction(title: "로그인", message: message) { [weak self] _ in
+                self?.goToConfirmVC()
+            }
+        } else {
+            alertWithOkAction(title: "로그인", message: message, alertCompletion: nil)
+        }
     }
     
     private func signInActionWithFirebase() {

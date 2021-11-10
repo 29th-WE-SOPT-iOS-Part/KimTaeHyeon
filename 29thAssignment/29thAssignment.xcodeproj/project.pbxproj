@@ -36,6 +36,7 @@
 		BD8DF478273BCBA500966ADB /* CommonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DF477273BCBA500966ADB /* CommonResponse.swift */; };
 		BD8DF480273BCCC100966ADB /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DF47F273BCCC100966ADB /* AuthResponse.swift */; };
 		BD8DF482273BCD0C00966ADB /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DF481273BCD0C00966ADB /* AuthRequest.swift */; };
+		BD8DF48A273BD69700966ADB /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8DF489273BD69700966ADB /* UIViewController+Alert.swift */; };
 		BDBD591D2709E6BC00AC85BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */; };
 		BDBD591F2709E6BC00AC85BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */; };
 		BDBD59262709E6BD00AC85BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDBD59252709E6BD00AC85BF /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		BD8DF477273BCBA500966ADB /* CommonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonResponse.swift; sourceTree = "<group>"; };
 		BD8DF47F273BCCC100966ADB /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		BD8DF481273BCD0C00966ADB /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
+		BD8DF489273BD69700966ADB /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		BDBD59192709E6BC00AC85BF /* 29thAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 29thAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				BD8C2F4E272640F000AB9342 /* UICollectionView+Extension.swift */,
 				BDCB59292730EEAF00EEDDF9 /* UITableViewCell+Extension.swift */,
 				BDCB592B2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift */,
+				BD8DF489273BD69700966ADB /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				BDCB592C2730F01E00EEDDF9 /* UICollectionViewCell+Extension.swift in Sources */,
 				BD60EE76271C818A0051AF67 /* UIScreen+Extension.swift in Sources */,
 				BDBD5955270AB68A00AC85BF /* UIStackView+Extension.swift in Sources */,
+				BD8DF48A273BD69700966ADB /* UIViewController+Alert.swift in Sources */,
 				BDFBB32A2715731000271907 /* PaddingLabel.swift in Sources */,
 				BD5658DF2733F7BB00EE57DD /* FeedCollectionViewCell.swift in Sources */,
 				BD68364A271DC85700C24BB6 /* LibraryViewController.swift in Sources */,

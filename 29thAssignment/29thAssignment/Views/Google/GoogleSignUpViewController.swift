@@ -50,7 +50,7 @@ class GoogleSignUpViewController: UIViewController {
         }
     }
     
-    // ✨ 실제 로그인하는 부분 (4주차 과제)
+    // ✨ 실제 회원가입 부분 (4주차 과제)
     private func signUpAction() {
         guard let userInfo = signUpView.userInfo() else { return }
         print(userInfo.password)
