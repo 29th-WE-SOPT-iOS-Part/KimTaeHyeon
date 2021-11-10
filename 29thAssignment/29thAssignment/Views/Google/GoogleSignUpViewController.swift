@@ -57,9 +57,21 @@ class GoogleSignUpViewController: UIViewController {
         
         APIClient.request(CommonResponse<AuthResponse>.self,
                           router: .signUp(signUpRequest: userInfo)) { [weak self] models in
-            print(models)
+            guard let self = self else { return }
+            self.judgeSignUp(success: models.success, message: models.message)
         } failure: { error in
             print(error)
+        }
+    }
+    
+    // ✨ 회원가입 성공 여부 판단
+    private func judgeSignUp(success: Bool, message: String) {
+        if success {
+            alertWithOkAction(title: "회원가입", message: message) { [weak self] _ in
+                self?.goToConfirmVC()
+            }
+        } else {
+            alertWithOkAction(title: "회원가입", message: message, alertCompletion: nil)
         }
     }
 
