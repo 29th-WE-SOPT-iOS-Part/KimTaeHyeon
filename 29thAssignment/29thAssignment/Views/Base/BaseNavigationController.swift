@@ -77,7 +77,7 @@ class BaseNavigationController: UINavigationController {
     }
     
     private func transitionToSignInViewController() {
-        let signInViewController = GoogleSignInViewController()
+        let signInViewController = UINavigationController(rootViewController: GoogleSignInViewController())
         signInViewController.modalPresentationStyle = .fullScreen
         present(signInViewController, animated: true, completion: nil)
     }

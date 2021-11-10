@@ -18,12 +18,9 @@ class APIClient {
                                   router: APIRouter,
                                   success: @escaping onSuccess<T>,
                                   failure: @escaping onFailure) where T: Decodable {
-        
-        print(try! router.asURLRequest())
         AF.request(router)
             .validate(statusCode: 200..<500)
             .responseDecodable(of: object) { response in
-                print(response)
                 switch response.result {
                 case .success:
                     guard let decodedData = response.value else { return }

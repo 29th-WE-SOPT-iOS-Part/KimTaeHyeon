@@ -68,7 +68,8 @@ class GoogleSignUpViewController: UIViewController {
     private func judgeSignUp(success: Bool, message: String) {
         if success {
             alertWithOkAction(title: "회원가입", message: message) { [weak self] _ in
-                self?.goToConfirmVC()
+                guard let self = self else { return }
+                self.goToConfirmVC()
             }
         } else {
             alertWithOkAction(title: "회원가입", message: message, alertCompletion: nil)
