@@ -194,13 +194,6 @@
 			path = NetworkModel;
 			sourceTree = "<group>";
 		};
-		BD8DF476273BCB7300966ADB /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
 		BD8FB1192725B30900B03D6E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,7 +315,6 @@
 		BDBD59372709E7D200AC85BF /* Networks */ = {
 			isa = PBXGroup;
 			children = (
-				BD8DF476273BCB7300966ADB /* NetworkManager */,
 				BD8DF475273BCB6B00966ADB /* NetworkModel */,
 				BD8DF46F273BC87400966ADB /* APIConstants.swift */,
 				BD8DF473273BC8F400966ADB /* APIRouter.swift */,

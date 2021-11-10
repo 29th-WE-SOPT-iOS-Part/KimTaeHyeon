@@ -50,11 +50,23 @@ class GoogleSignInViewController: UIViewController {
         }
         
         signInView.confirmButton.press { [weak self] in
-            self?.signUpAction()
+            self?.signInAction()
         }
     }
     
-    private func signUpAction() {
+    // ✨ 실제 로그인하는 부분 (4주차 과제)
+    private func signInAction() {
+        guard let userInfo = signInView.userInfo() else { return }
+        APIClient.request(CommonResponse<AuthResponse>.self,
+                          router: .signIn(signInRequest: userInfo)) { [weak self] models in
+            print(models)
+        } failure: { error in
+            print(error)
+        }
+
+    }
+    
+    private func signInActionWithFirebase() {
         guard let userInfo = signInView.userInfo() else { return }
         
         FirebaseAuth.Auth.auth().signIn(withEmail: userInfo.email, password: userInfo.password) { [weak self] (user, error) in

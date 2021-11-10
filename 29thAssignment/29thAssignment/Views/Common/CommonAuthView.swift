@@ -196,14 +196,14 @@ final class CommonAuthView: UIView {
     }
     
     @discardableResult
-    public func userInfo() -> GoogleUserInfo? {
+    public func userInfo() -> AuthRequest? {
         guard let name = nameTextField.text, name.isNotEmpty,
               let contact = contactTextField.text, contact.isNotEmpty,
               let password = passwordTextField.text, password.isNotEmpty  else {
                   return nil
               }
         
-        return GoogleUserInfo(name: name, email: contact, password: password)
+        return AuthRequest(email: contact, name: name, password: password)
     }
     
     /**

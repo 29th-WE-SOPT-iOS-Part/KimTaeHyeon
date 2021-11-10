@@ -17,9 +17,7 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - Methods
     var method: HTTPMethod {
         switch self {
-        case .signIn:
-            return .get
-        case .signUp:
+        case .signIn, .signUp:
             return .post
         }
     }

@@ -10,7 +10,7 @@ import Foundation
 struct APIConstants {
     // MARK: - Start Endpoint
     static var baseURL: URL {
-        return URL(string: "https://asia-northeast3-we-sopt-29.cloudfunctions.net/api/")!
+        return URL(string: "https://asia-northeast3-we-sopt-29.cloudfunctions.net/api")!
     }
 }
 
