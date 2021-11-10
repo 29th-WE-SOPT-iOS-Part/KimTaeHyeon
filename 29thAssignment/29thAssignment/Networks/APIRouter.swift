@@ -11,8 +11,8 @@ import Alamofire
 
 enum APIRouter: URLRequestConvertible {
     // MARK: - Cases
-    case signIn
-    case signUp(email: String, name: String, password: String)
+    case signIn(signInRequest: AuthRequest)
+    case signUp(signUpRequest: AuthRequest)
     
     // MARK: - Methods
     var method: HTTPMethod {
@@ -29,7 +29,7 @@ enum APIRouter: URLRequestConvertible {
         switch self {
         case .signIn:
             return "/user/login"
-        case .signUp(_,_,_):
+        case .signUp:
             return "/user/signup"
         }
     }
@@ -37,13 +37,16 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - Parameters
     private var parameters: Parameters? {
         switch self {
-        case .signIn:
-            return nil
-        case .signUp(let email, let name, let password):
+        case .signIn(let signInRequest):
             return [
-                "email": email,
-                "name": name,
-                "password": password
+                "email": signInRequest.email,
+                "password": signInRequest.password
+            ]
+        case .signUp(let signUpRequest):
+            return [
+                "email": signUpRequest.email,
+                "name": signUpRequest.name ?? "",
+                "password": signUpRequest.password
             ]
         }
     }
@@ -51,7 +54,7 @@ enum APIRouter: URLRequestConvertible {
     // MARK: - Encodings
     var encoding: ParameterEncoding {
         switch self {
-        case .signIn, .signUp(_,_,_):
+        case .signIn, .signUp:
             return JSONEncoding.default
         }
     }
