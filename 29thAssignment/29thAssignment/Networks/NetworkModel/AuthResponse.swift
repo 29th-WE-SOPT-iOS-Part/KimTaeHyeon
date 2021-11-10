@@ -23,7 +23,7 @@ import Foundation
 struct AuthResponse: Codable {
     let id: Int
     let name: String
-    let password: String?
+    let password: String? // postman 찍어보면 회원가입도 password 안 돌아옴
     let email: String
 }
 

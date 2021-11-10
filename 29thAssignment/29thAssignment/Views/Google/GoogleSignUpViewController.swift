@@ -49,8 +49,21 @@ class GoogleSignUpViewController: UIViewController {
             self?.signUpAction()
         }
     }
-
+    
+    // ✨ 실제 로그인하는 부분 (4주차 과제)
     private func signUpAction() {
+        guard let userInfo = signUpView.userInfo() else { return }
+        print(userInfo.password)
+        
+        APIClient.request(CommonResponse<AuthResponse>.self,
+                          router: .signUp(signUpRequest: userInfo)) { [weak self] models in
+            print(models)
+        } failure: { error in
+            print(error)
+        }
+    }
+
+    private func signUpActionWithFirebase() {
         guard let userInfo = signUpView.userInfo() else { return }
         FirebaseAuth.Auth.auth().createUser(withEmail: userInfo.email, password: userInfo.password) { [weak self] (result, error) in
             if error != nil {
