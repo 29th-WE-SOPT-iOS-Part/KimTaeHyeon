@@ -51,6 +51,11 @@ extension DelegatePracticeVC: UICollectionViewDataSource {
         }
         keywordCell.setKeyword(text: nameList[indexPath.row])
         keywordCell.keywordDelegate = self
+        keywordCell.presentingClosure = { [weak self] in
+            let nextVC = self?.storyboard?
+                .instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            self?.present(nextVC, animated: true, completion: nil)
+        }
         return keywordCell
     }
 }

@@ -19,6 +19,7 @@ class KeywordCVC: UICollectionViewCell {
     var keyword: String = ""
     var isSelectedKeyword: Bool = false
     weak var keywordDelegate: KeywordCellDelegate?
+    var presentingClosure: (() -> ())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,7 @@ class KeywordCVC: UICollectionViewCell {
         } else {
             keywordDelegate?.keywordCellSelected(cell: self)
             keywordButton.backgroundColor = .yellow
+            presentingClosure?()
         }
         isSelectedKeyword.toggle()
     }
