@@ -12,4 +12,8 @@ target '29thAssignment' do
   # Pods for Firebase
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+
+  # Pods for Network
+  pod 'Alamofire', '~> 5.4'
+  pod 'Moya', '~> 14.0'
 end
