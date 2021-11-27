@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="KeywordCVC" customModule="_9thSeminar7" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="163" height="189"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="163" height="189"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjD-1D-Opv">
+                        <rect key="frame" x="5" y="5" width="153" height="179"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <connections>
+                            <action selector="touchUpToSelect:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Anm-dP-EeZ"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="TjD-1D-Opv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="Bfg-3Q-skq"/>
+                <constraint firstItem="TjD-1D-Opv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="G1n-YX-b6e"/>
+                <constraint firstAttribute="trailing" secondItem="TjD-1D-Opv" secondAttribute="trailing" constant="5" id="grP-VI-VQb"/>
+                <constraint firstAttribute="bottom" secondItem="TjD-1D-Opv" secondAttribute="bottom" constant="5" id="jSI-98-lH4"/>
+            </constraints>
+            <size key="customSize" width="163" height="189"/>
+            <connections>
+                <outlet property="keywordButton" destination="TjD-1D-Opv" id="xHc-Fo-XiG"/>
+            </connections>
+            <point key="canvasLocation" x="219.56521739130437" y="193.19196428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>
