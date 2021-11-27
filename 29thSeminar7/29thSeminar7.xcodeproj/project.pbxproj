@@ -16,6 +16,7 @@
 		BD0A4E8B2752079A00C74793 /* DelegatePracticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A4E8A2752079A00C74793 /* DelegatePracticeVC.swift */; };
 		BD0A4E8E2752086000C74793 /* KeywordCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A4E8C2752086000C74793 /* KeywordCVC.swift */; };
 		BD0A4E8F2752086000C74793 /* KeywordCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0A4E8D2752086000C74793 /* KeywordCVC.xib */; };
+		BD0A4E912752182A00C74793 /* GestureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0A4E902752182A00C74793 /* GestureVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BD0A4E8A2752079A00C74793 /* DelegatePracticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatePracticeVC.swift; sourceTree = "<group>"; };
 		BD0A4E8C2752086000C74793 /* KeywordCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeywordCVC.swift; sourceTree = "<group>"; };
 		BD0A4E8D2752086000C74793 /* KeywordCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeywordCVC.xib; sourceTree = "<group>"; };
+		BD0A4E902752182A00C74793 /* GestureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				BD0A4E8A2752079A00C74793 /* DelegatePracticeVC.swift */,
 				BD0A4E8C2752086000C74793 /* KeywordCVC.swift */,
 				BD0A4E8D2752086000C74793 /* KeywordCVC.xib */,
+				BD0A4E902752182A00C74793 /* GestureVC.swift */,
 			);
 			path = 29thSeminar7;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				BD0A4E7B2752065400C74793 /* ViewController.swift in Sources */,
 				BD0A4E8E2752086000C74793 /* KeywordCVC.swift in Sources */,
+				BD0A4E912752182A00C74793 /* GestureVC.swift in Sources */,
 				BD0A4E772752065400C74793 /* AppDelegate.swift in Sources */,
 				BD0A4E8B2752079A00C74793 /* DelegatePracticeVC.swift in Sources */,
 				BD0A4E792752065400C74793 /* SceneDelegate.swift in Sources */,
