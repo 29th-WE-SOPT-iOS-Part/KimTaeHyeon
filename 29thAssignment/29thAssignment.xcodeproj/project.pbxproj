@@ -150,7 +150,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD68363A271DC78A00C24BB6 /* Home */ = {
+		BD68363A271DC78A00C24BB6 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
 				BD8FB1192725B30900B03D6E /* View */,
@@ -158,95 +158,48 @@
 				BD683641271DC83800C24BB6 /* HomeVC.swift */,
 				BD6BA8DA2736D5B70054F6F0 /* HomeVC+SectionLayout.swift */,
 			);
-			path = Home;
+			path = HomeScene;
 			sourceTree = "<group>";
 		};
-		BD68363B271DC79100C24BB6 /* Library */ = {
+		BD68363B271DC79100C24BB6 /* LibraryScene */ = {
 			isa = PBXGroup;
 			children = (
 				BD683649271DC85700C24BB6 /* LibraryVC.swift */,
 			);
-			path = Library;
+			path = LibraryScene;
 			sourceTree = "<group>";
 		};
-		BD68363C271DC7A500C24BB6 /* Shorts */ = {
+		BD68363C271DC7A500C24BB6 /* ShortsScene */ = {
 			isa = PBXGroup;
 			children = (
 				BD683643271DC83E00C24BB6 /* ShortsVC.swift */,
 			);
-			path = Shorts;
+			path = ShortsScene;
 			sourceTree = "<group>";
 		};
-		BD68363D271DC7B700C24BB6 /* Plus */ = {
+		BD68363D271DC7B700C24BB6 /* MakeScene */ = {
 			isa = PBXGroup;
 			children = (
 				BD683645271DC84500C24BB6 /* PlusVC.swift */,
 			);
-			path = Plus;
+			path = MakeScene;
 			sourceTree = "<group>";
 		};
-		BD68363E271DC7D600C24BB6 /* Subscription */ = {
+		BD68363E271DC7D600C24BB6 /* SubscriptionScene */ = {
 			isa = PBXGroup;
 			children = (
 				BD683647271DC84F00C24BB6 /* SubscriptionVC.swift */,
 			);
-			path = Subscription;
+			path = SubscriptionScene;
 			sourceTree = "<group>";
 		};
-		BD8DF475273BCB6B00966ADB /* NetworkModel */ = {
-			isa = PBXGroup;
-			children = (
-				BD8DF4A6273C167F00966ADB /* Auth */,
-			);
-			path = NetworkModel;
-			sourceTree = "<group>";
-		};
-		BD8DF48B273BFD0100966ADB /* BaseArchitecture */ = {
-			isa = PBXGroup;
-			children = (
-				BD8DF48C273BFD2400966ADB /* BaseViewController.swift */,
-				BD8DF49C273C0D9C00966ADB /* BaseNavigationController.swift */,
-			);
-			path = BaseArchitecture;
-			sourceTree = "<group>";
-		};
-		BD8DF490273BFE2C00966ADB /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				BD747CD427114979007B5274 /* CommonAuthView.swift */,
-				BDFBB3292715731000271907 /* PaddingLabel.swift */,
-				BDFBB32B271573BC00271907 /* BaeminStyleTextField.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		BD8DF491273BFEAB00966ADB /* Tab */ = {
+		BD8DF491273BFEAB00966ADB /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				BD8DF498273C05C900966ADB /* HomeTab.swift */,
 				BD68363F271DC82A00C24BB6 /* MainTabBarController.swift */,
 			);
-			path = Tab;
-			sourceTree = "<group>";
-		};
-		BD8DF492273BFED300966ADB /* NetworkBase */ = {
-			isa = PBXGroup;
-			children = (
-				BD8DF46F273BC87400966ADB /* APIConstants.swift */,
-				BD8DF473273BC8F400966ADB /* APIRouter.swift */,
-				BD8DF471273BC8DA00966ADB /* APIClient.swift */,
-				BD8DF477273BCBA500966ADB /* CommonResponse.swift */,
-			);
-			path = NetworkBase;
-			sourceTree = "<group>";
-		};
-		BD8DF4A6273C167F00966ADB /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				BD8DF481273BCD0C00966ADB /* AuthRequest.swift */,
-				BD8DF47F273BCCC100966ADB /* AuthResponse.swift */,
-			);
-			path = Auth;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		BD8FB1192725B30900B03D6E /* View */ = {
@@ -284,71 +237,45 @@
 		BDBD591B2709E6BC00AC85BF /* 29thAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				BDBD59322709E7A800AC85BF /* App */,
-				BDBD59342709E7BF00AC85BF /* Helpers */,
-				BDBD59332709E7B400AC85BF /* Supporting Files */,
-				BDBD59312709E79000AC85BF /* Models */,
-				BDBD59372709E7D200AC85BF /* Networks */,
-				BDBD59302709E78900AC85BF /* Screens */,
+				BDBD59322709E7A800AC85BF /* Application */,
+				BDBD59342709E7BF00AC85BF /* Utils */,
+				BDBD59332709E7B400AC85BF /* Supportings */,
+				BDD2AF0627734D9A004D0442 /* Model */,
+				BDBD59372709E7D200AC85BF /* Service */,
+				BDD2AF0027734212004D0442 /* Data */,
+				BDD2AEFE27734037004D0442 /* UI */,
 			);
 			path = 29thAssignment;
 			sourceTree = "<group>";
 		};
-		BDBD59302709E78900AC85BF /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				BDBD59422709EDDE00AC85BF /* Auth */,
-				BD8DF491273BFEAB00966ADB /* Tab */,
-				BD68363A271DC78A00C24BB6 /* Home */,
-				BD68363C271DC7A500C24BB6 /* Shorts */,
-				BD68363D271DC7B700C24BB6 /* Plus */,
-				BD68363E271DC7D600C24BB6 /* Subscription */,
-				BD68363B271DC79100C24BB6 /* Library */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
-		BDBD59312709E79000AC85BF /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BD5658E12733FE9F00EE57DD /* Channel.swift */,
-				BD5658E32733FEE900EE57DD /* Feed.swift */,
-				BD8DF4A4273C130D00966ADB /* Category.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		BDBD59322709E7A800AC85BF /* App */ = {
+		BDBD59322709E7A800AC85BF /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				BDBD591C2709E6BC00AC85BF /* AppDelegate.swift */,
 				BDBD591E2709E6BC00AC85BF /* SceneDelegate.swift */,
 			);
-			path = App;
+			path = Application;
 			sourceTree = "<group>";
 		};
-		BDBD59332709E7B400AC85BF /* Supporting Files */ = {
+		BDBD59332709E7B400AC85BF /* Supportings */ = {
 			isa = PBXGroup;
 			children = (
+				BDD2AF0327734851004D0442 /* Infos */,
 				BDF3E86F27204AC8000BFA1C /* Fonts */,
 				BDBD59272709E6BD00AC85BF /* LaunchScreen.storyboard */,
-				BDFBB36A2715EB0D00271907 /* GoogleService-Info.plist */,
 				BDBD59252709E6BD00AC85BF /* Assets.xcassets */,
-				BDBD592A2709E6BD00AC85BF /* Info.plist */,
 			);
-			path = "Supporting Files";
+			path = Supportings;
 			sourceTree = "<group>";
 		};
-		BDBD59342709E7BF00AC85BF /* Helpers */ = {
+		BDBD59342709E7BF00AC85BF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				BD8DF48B273BFD0100966ADB /* BaseArchitecture */,
-				BD8DF490273BFE2C00966ADB /* Components */,
-				BDF3E86A27204AA7000BFA1C /* Commons */,
+				BDF3E86A27204AA7000BFA1C /* Constants */,
 				BDFBB32D271573DA00271907 /* Protocols */,
 				BDBD59352709E7C400AC85BF /* Extensions */,
 			);
-			path = Helpers;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		BDBD59352709E7C400AC85BF /* Extensions */ = {
@@ -369,35 +296,124 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		BDBD59372709E7D200AC85BF /* Networks */ = {
+		BDBD59372709E7D200AC85BF /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				BD8DF492273BFED300966ADB /* NetworkBase */,
-				BD8DF475273BCB6B00966ADB /* NetworkModel */,
+				BDD2AF0427734B74004D0442 /* Networking */,
 			);
-			path = Networks;
+			path = Service;
 			sourceTree = "<group>";
 		};
-		BDBD59422709EDDE00AC85BF /* Auth */ = {
+		BDBD59422709EDDE00AC85BF /* AuthScene */ = {
 			isa = PBXGroup;
 			children = (
 				BDBD59492709EE2800AC85BF /* GoogleSignInViewController.swift */,
 				BDBD59472709EE1F00AC85BF /* GoogleSignUpViewController.swift */,
 				BDBD594B2709EE3300AC85BF /* GoogleConfirmViewController.swift */,
 			);
-			path = Auth;
+			path = AuthScene;
 			sourceTree = "<group>";
 		};
-		BDF3E86A27204AA7000BFA1C /* Commons */ = {
+		BDD2AEFE27734037004D0442 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BDD2AEFF277340A1004D0442 /* Common */,
+				BDBD59422709EDDE00AC85BF /* AuthScene */,
+				BD68363A271DC78A00C24BB6 /* HomeScene */,
+				BD68363C271DC7A500C24BB6 /* ShortsScene */,
+				BD68363D271DC7B700C24BB6 /* MakeScene */,
+				BD68363E271DC7D600C24BB6 /* SubscriptionScene */,
+				BD68363B271DC79100C24BB6 /* LibraryScene */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BDD2AEFF277340A1004D0442 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2AF02277342D3004D0442 /* ViewControllers */,
+				BDD2AF01277342AC004D0442 /* Views */,
+				BD8DF491273BFEAB00966ADB /* TabBar */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BDD2AF0027734212004D0442 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BDD2AF0527734D6F004D0442 /* DTO */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BDD2AF01277342AC004D0442 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD747CD427114979007B5274 /* CommonAuthView.swift */,
+				BDFBB3292715731000271907 /* PaddingLabel.swift */,
+				BDFBB32B271573BC00271907 /* BaeminStyleTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BDD2AF02277342D3004D0442 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD8DF48C273BFD2400966ADB /* BaseViewController.swift */,
+				BD8DF49C273C0D9C00966ADB /* BaseNavigationController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BDD2AF0327734851004D0442 /* Infos */ = {
+			isa = PBXGroup;
+			children = (
+				BDFBB36A2715EB0D00271907 /* GoogleService-Info.plist */,
+				BDBD592A2709E6BD00AC85BF /* Info.plist */,
+			);
+			path = Infos;
+			sourceTree = "<group>";
+		};
+		BDD2AF0427734B74004D0442 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BD8DF477273BCBA500966ADB /* CommonResponse.swift */,
+				BD8DF46F273BC87400966ADB /* APIConstants.swift */,
+				BD8DF473273BC8F400966ADB /* APIRouter.swift */,
+				BD8DF471273BC8DA00966ADB /* APIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BDD2AF0527734D6F004D0442 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				BD8DF481273BCD0C00966ADB /* AuthRequest.swift */,
+				BD8DF47F273BCCC100966ADB /* AuthResponse.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		BDD2AF0627734D9A004D0442 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BD5658E12733FE9F00EE57DD /* Channel.swift */,
+				BD5658E32733FEE900EE57DD /* Feed.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BDF3E86A27204AA7000BFA1C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BD8DF4A4273C130D00966ADB /* Category.swift */,
 				BDF3E86D27204AB9000BFA1C /* Font.swift */,
 				BD68364C271DC88700C24BB6 /* Const.swift */,
 				BD8DF4A0273C0FB200966ADB /* Image.swift */,
 				BD8DF4A2273C114C00966ADB /* Palette.swift */,
 				BD8DF4A7273C1A9E00966ADB /* Key.swift */,
 			);
-			path = Commons;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		BDF3E86F27204AC8000BFA1C /* Fonts */ = {
@@ -749,7 +765,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W895YM7ZMH;
-				INFOPLIST_FILE = "29thAssignment/Supporting Files/Info.plist";
+				INFOPLIST_FILE = 29thAssignment/Supportings/Infos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -769,7 +785,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W895YM7ZMH;
-				INFOPLIST_FILE = "29thAssignment/Supporting Files/Info.plist";
+				INFOPLIST_FILE = 29thAssignment/Supportings/Infos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
