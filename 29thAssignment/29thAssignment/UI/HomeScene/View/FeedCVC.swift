@@ -14,9 +14,11 @@ class FeedCVC: UICollectionViewCell {
     @IBOutlet weak var feedTitleLabel: UILabel!
     @IBOutlet weak var feedSubInformationLabel: UILabel!
 
+    var imageViewClosure: (() -> ())?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setTapGesture()
     }
 
     // 재사용으로 인한 이슈 방지
@@ -26,17 +28,23 @@ class FeedCVC: UICollectionViewCell {
     }
     
     // 데이터 설정 함수
-    public func configure(thumbnailImage: UIImage?,
-                          profileImage: UIImage?,
-                          feedTitle: String,
-                          feedSubInformation: String) {
-        
-        if let thumbnailImage = thumbnailImage,
-           let profileImage = profileImage {
-            thumbnailImageView.image = thumbnailImage
-            profileImageView.image = profileImage
-            feedTitleLabel.text = feedTitle
-            feedSubInformationLabel.text = feedSubInformation
+    public func configure(feed: Feed?) {
+        if let feed = feed {
+            thumbnailImageView.image = feed.thumbnailImage
+            profileImageView.image = feed.profileImage
+            feedTitleLabel.text = feed.feedTitle
+            feedSubInformationLabel.text = feed.feedSubtitle
         }
+    }
+    
+    private func setTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(transferData))
+        thumbnailImageView.addGestureRecognizer(tapGesture)
+        thumbnailImageView.isUserInteractionEnabled = true
+    }
+    
+    @objc
+    func transferData() {
+        imageViewClosure?()
     }
 }

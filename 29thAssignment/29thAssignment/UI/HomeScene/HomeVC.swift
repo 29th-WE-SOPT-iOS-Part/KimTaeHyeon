@@ -97,10 +97,14 @@ extension HomeVC: UICollectionViewDataSource {
         case .feed:
             let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as FeedCVC
             let feed = feeds[indexPath.row]
-            cell.configure(thumbnailImage: feed.thumbnailImage,
-                           profileImage: feed.profileImage,
-                           feedTitle: feed.feedTitle,
-                           feedSubInformation: feed.feedSubtitle)
+            cell.configure(feed: feed)
+            // 데이터 전달
+            cell.imageViewClosure = {
+                let vc = HomeDetailVC()
+                vc.modalPresentationStyle = .fullScreen
+                vc.feed = feed
+                self.present(vc, animated: true, completion: nil)
+            }
             return cell
         }
     }

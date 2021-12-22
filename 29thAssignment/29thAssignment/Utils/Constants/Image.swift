@@ -46,4 +46,7 @@ enum Image {
     static let ggamju6 = UIImage(named: "ggamju6")
     static let ggamju7 = UIImage(named: "ggamju7")
     static let ggamju8 = UIImage(named: "ggamju8")
+    
+    static let dismissBtnIcon = UIImage(named: "icn_dismissBtn")
+    static let expandBtnIcon = UIImage(named: "icn_expandBtn")
 }
